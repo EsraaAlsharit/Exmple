@@ -8,7 +8,7 @@ Use **margins** and **paddings** to adjust the spaces between divisions and use 
 Here's the HTML code:
 
 ````md
-```<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Position Practice</title>
@@ -27,10 +27,8 @@ Here's the HTML code:
     </div>
 </body>
 </html>
-```
 ````
 
-```
 
 And CSS:
 

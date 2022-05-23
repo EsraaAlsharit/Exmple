@@ -7,7 +7,6 @@
 .top-nav {
     height: 150px;
     margin:  1%;
-    vertical-align: middle;
     background-color: green;
 }
 
@@ -20,7 +19,7 @@
 }
 .main {
     height: auto;
-    width: 74%;
+    width: 74.5%;
     display: inline-block;
     margin: 1%;
     padding: .5%;

@@ -7,6 +7,44 @@ Use **margins** and **paddings** to adjust the spaces between divisions and use 
 
 Here's the HTML code:
 
+>
+><!DOCTYPE html>
+><html lang="en">
+><head>
+>    <title>Position Practice</title>
+>    <link rel="stylesheet" type="text/css" href="style.css">
+></head>
+><body>
+>    <div class="container">
+>        <div class="top-nav"></div>
+>        <div class="side-nav"></div>
+>        <div class="main">
+>            <div class="sub-content"></div>
+>            <div class="sub-content"></div>
+>            <div class="sub-content"></div>
+>            <div id="advertisement"></div>
+>        </div>
+>    </div>
+></body>
+></html>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
 And CSS:
 
 While we do this assignment, we can make use `height` as well as the `vertical-align` property to give the necessary height to the division and also to vertically align some of the inline-blocks.

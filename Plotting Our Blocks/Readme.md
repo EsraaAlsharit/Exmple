@@ -7,25 +7,25 @@ Use **margins** and **paddings** to adjust the spaces between divisions and use 
 
 Here's the HTML code:
 
-<code>
-<!DOCTYPE html>
 
-<html lang="en">
-<head>
-    <title>Position Practice</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="top-nav"></div>
-        <div class="side-nav"></div>
-        <div class="main">
-            <div class="sub-content"></div>
-            <div class="sub-content"></div>
-            <div class="sub-content"></div>
-            <div id="advertisement"></div>
-        </div>
-    </div>
-</body>
-</html>
-</code>
+> <!DOCTYPE html>
+>
+> <html lang="en">
+> <head>
+>    <title>Position Practice</title>
+>    <link rel="stylesheet" type="text/css" href="style.css">
+></head>
+><body>
+>    <div class="container">
+>        <div class="top-nav"></div>
+>        <div class="side-nav"></div>
+>        <div class="main">
+>           <div class="sub-content"></div>
+>            <div class="sub-content"></div>
+>            <div class="sub-content"></div>
+>            <div id="advertisement"></div>
+>        </div>
+>    </div>
+></body>
+></html>
+></code>

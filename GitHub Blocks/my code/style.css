@@ -4,10 +4,10 @@ body{
 img.octocat {
     height: 200px;    
 }
-h1{
+.center{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 div{
     display: flex;

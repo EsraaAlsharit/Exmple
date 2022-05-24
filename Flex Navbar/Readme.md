@@ -25,7 +25,7 @@
 
 - [x] Use the supplied HTML code snippet to recreate the image using flex.
 
-- [x] (optional) Use google font Roboto
+- [x] (optional) Use google font [Roboto](https://fonts.google.com/specimen/Roboto?preview.text_type=custom)
 
 ```md
 <div class="nav">

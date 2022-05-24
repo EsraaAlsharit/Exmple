@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Monolog';
+    src: local('Monolog SemiBold'), local('Monolog-SemiBold'),
+        url('Monolog-SemiBold.woff2') format('woff2'),
+        url('Monolog-SemiBold.woff') format('woff'),
+        url('Monolog-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    font-family: 'Monolog', sans-serif;
+}
+
 body{
     margin: auto;
     text-align: center;
@@ -7,7 +20,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 1%;
+    padding:0 1.5%;
     background-color: #333333;
 }
 .nav-title{
@@ -24,7 +37,7 @@ body{
 .btn{
     box-shadow: 3px 3px 0px 1px #000;
     border: 3px solid #000;
-    background-color: #2B78E4;
+    background-color: #17A2B8;
     color: #fff;
     font-size: medium;
 }

@@ -1,0 +1,38 @@
+body{
+    margin: auto;
+    text-align: center;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1%;
+    background-color: #333333;
+}
+.nav-title{
+    color: #fff;
+}
+
+.nav-links{
+    list-style-type: none;
+    display: flex; 
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    border: 3px solid #000;
+    background-color: #2B78E4;
+    color: #fff;
+    font-size: medium;
+}
+a{
+    color: #B7B7B7;
+    text-decoration: none;  
+}
+a.active{
+    font-weight: bold;
+    color: #fff;
+}

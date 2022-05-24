@@ -21,7 +21,7 @@
 
 **Style it using CSS to resemble the following navigation bar**
 
-![]()
+![](flex-navbar.png)
 
 - [x] Use the supplied HTML code snippet to recreate the image using flex.
 

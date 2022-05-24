@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    padding: 20px;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+    
+    box-shadow: 4px 4px 4px grey;
+    
+}
+.top{
+    background-color: #659DA1 ;
+    padding: 10%;
+    
+}
+.icon{
+    width: 2%;
+}
+.img{
+    width: 10%;
+    position: absolute; 
+    top: 15%;
+    
+}
+.details{
+    padding: 6% 1%;
+}
+h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+p {
+    margin: 20px 10px;
+    font-size: 1.1rem;
+}
+a{
+    color: #085394;
+}

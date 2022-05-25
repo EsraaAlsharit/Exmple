@@ -9,26 +9,32 @@ body{
 .container {
     width: 60%;
     margin: 0 auto;
-    
     box-shadow: 4px 4px 4px grey;
-    
+    border:  5px solid aliceblue ;
 }
 .top{
     background-color: #659DA1 ;
-    padding: 10%;
+    
+    padding-bottom: 20%;
     
 }
 .icon{
-    width: 2%;
+    width: 3%;
+    margin: 1.5%;
 }
 .img{
     width: 10%;
+    display: block;
     position: absolute; 
-    top: 15%;
+    margin: 6% 5%;
+    border:  5px solid aliceblue ;
+    border-radius: 50%;
+    /* top: 50%; */
     
 }
 .details{
-    padding: 6% 1%;
+    padding: 10% 5% 1% 5%;
+    width: 55%;
 }
 /* h1 {
     font-size: 50px;
@@ -37,8 +43,11 @@ body{
     border-bottom: 1px solid #ccc;
 } */
 p {
-    margin: 20px 10px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 a{
     color: #085394;

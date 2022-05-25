@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Monolog';
+    src: local('Monolog SemiBold'), local('Monolog-SemiBold'),
+        url('Monolog-SemiBold.woff2') format('woff2'),
+        url('Monolog-SemiBold.woff') format('woff'),
+        url('Monolog-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    font-family: 'Monolog', sans-serif;
+    outline: 1px dotted red;
+}
+
+body{
+    margin: auto;
+    
+}
+
+.container{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+}
+
+.content{
+    width: 70%;
+}
+
+.sidecontent{
+    width: 20%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1.5%;
+    background-color: #333333;
+}
+.nav-title{
+    color: #fff;
+}
+
+.nav-links{
+    list-style-type: none;
+    display: flex; 
+    
+    width: 35%;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    border: 3px solid #000;
+    background-color: #17A2B8;
+    color: #fff;
+    font-size: medium;
+}
+a{
+    color: #B7B7B7;
+    text-decoration: none;  
+}
+a.active{
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ========================================= */
+
+.top-card {
+    margin-bottom: 5%;
+    border:  5px solid #C9C9C9 ;
+}
+.top{
+    background-color: #659DA1 ;
+    padding-bottom: 18%;
+}
+.icon{
+    width: 4%;
+    margin: 1.5%;
+}
+.img{
+    width: 8%;
+    display: block;
+    position: absolute; 
+    margin: 6% 5%;
+    box-shadow: #C9C9C9;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    background-color: #fff;
+    padding: 3px;
+    border:  3px solid #c9c9c9 ;
+    border-radius: 50%;
+    
+}
+.details{
+    padding: 12% 10% 1% 10%;
+    width: 40%;
+}
+p {
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+a.link{
+    color: #085394;
+    text-decoration: underline;  
+}
+
+/* ======================================= */
+
+.card{
+    margin-bottom: 5%;
+    
+}
+
+.card-header{
+    background-color: #333333;
+    height: 5%;
+    color: #fff;
+}
+
+.row{
+    display: flex;
+
+}

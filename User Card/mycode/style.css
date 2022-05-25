@@ -13,6 +13,7 @@ body{
 }
 .top{
     background-color: #659DA1 ;
+    
     padding-bottom: 20%;
     
 }
@@ -27,14 +28,15 @@ body{
     margin: 6% 5%;
     box-shadow: #C9C9C9;
     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    padding: ;
-    border:  4px solid #c9c9c9 ;
+    background-color: #fff;
+    padding: 3px;
+    border:  3px solid #c9c9c9 ;
     border-radius: 50%;
     
 }
 .details{
-    padding: 10% 5% 1% 5%;
-    width: 55%;
+    padding: 12% 10% 1% 10%;
+    width: 40%;
 }
 p {
     margin: 15px 0px;

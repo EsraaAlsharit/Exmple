@@ -30,6 +30,10 @@ body{
 
 .sidecontent{
     width: 20%;
+}
+
+.box{
+    border:  5px solid #C9C9C9 ;
     
 }
 
@@ -37,24 +41,23 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 13%;
+    padding:0 12%;
     background-color: #000;
 }
 .navbar{
     display: flex;
-    justify-content: space-between;
+    
     width: 50%;
 }
 .nav-title{
     color: #fff;
 }
 
-
-
 .nav-links{
     list-style-type: none;
     display: flex; 
     align-items: center;
+    width: 70%;
     justify-content: space-between;
 }
 .btn{
@@ -77,10 +80,10 @@ a.active{
 
 .top-card {
     margin-bottom: 5%;
-    border:  5px solid #C9C9C9 ;
+    border-top: none;
 }
 .top{
-    background-color: #659DA1 ;
+    background-color: #659DA1;
     padding-bottom: 18%;
 }
 .icon{
@@ -120,7 +123,7 @@ a.link{
 
 .card{
     margin-bottom: 10%;
-    border:  5px solid #C9C9C9 ;
+    border-top: none;
 }
 
 .card-header{
@@ -129,25 +132,35 @@ a.link{
     padding: 15px;
 }
 
-.notify {
-    display: flex;
-    justify-content: space-between;
+.with-notify {
+    display: flex; 
+    justify-content: space-around;
 }
 
-span.notify {
+.notify {
     background-color: #C9C9C9;
     color: #000;
-    border: #C9C9C9;
-    border-radius: 100%;
-    font-size: 1rem;
+    border: 1px solid #C9C9C9;
+    border-radius: 50%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    
 }
+
+#over{
+    width: 22%; 
+}
+
 
 
 .card-header h3{
     margin: 0% 1% 0% 1%; 
 }
 
-
+.card-header h4{
+    margin: 1px;    
+}
 
 .pha h2,.pha h3, .pha p  {
     margin: 2px;
@@ -155,7 +168,6 @@ span.notify {
 .pha h3{
     color: #707070;
 }
-
 
 .card-body{
     margin: 5%;

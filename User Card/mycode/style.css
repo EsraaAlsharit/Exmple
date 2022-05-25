@@ -30,12 +30,12 @@ body{
 .details{
     padding: 6% 1%;
 }
-h1 {
+/* h1 {
     font-size: 50px;
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #ccc;
-}
+} */
 p {
     margin: 20px 10px;
     font-size: 1.1rem;

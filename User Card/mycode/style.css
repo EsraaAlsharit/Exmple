@@ -9,8 +9,8 @@ body{
 .container {
     width: 60%;
     margin: 0 auto;
-    box-shadow: 4px 4px 4px grey;
-    border:  5px solid aliceblue ;
+    
+    border:  5px solid #C9C9C9 ;
 }
 .top{
     background-color: #659DA1 ;
@@ -19,7 +19,7 @@ body{
     
 }
 .icon{
-    width: 3%;
+    width: 4%;
     margin: 1.5%;
 }
 .img{
@@ -27,7 +27,7 @@ body{
     display: block;
     position: absolute; 
     margin: 6% 5%;
-    border:  5px solid aliceblue ;
+    border:  5px solid #c9c9c9 ;
     border-radius: 50%;
     /* top: 50%; */
     

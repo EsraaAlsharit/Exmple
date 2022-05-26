@@ -11,7 +11,7 @@ const arr1 = [1, 2, 3]
 // // after running function arr1 should now be:
 // const arr1Expected = [2, 3]
 
- const arr2 = ["a", "b", "c", "d"]
+const arr2 = ["a", "b", "c", "d"]
 // const expected2 = "a"
 // // after running function arr2 should now be:
 // const arr2Expected = ["b", "c", "d"]
@@ -25,7 +25,7 @@ function shift(arr) {
     
     return element
 
-}
+}//we could do it without make new arr by shifting the element with val
 
 console.log(shift(arr1));
 console.log(shift(arr2));

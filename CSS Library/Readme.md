@@ -7,7 +7,7 @@ Start with the following stylesheet called `dojo.css`
 ```md
 /_ CSS reset _/
 
-- {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

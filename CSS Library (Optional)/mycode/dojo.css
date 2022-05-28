@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: solid red; */
 }
 
   /* Fixed width container class that will "auto-center" itself */
@@ -19,4 +20,27 @@
     background-color: transparent;
     color: #00D1B2;
     width: 10%;
+}
+
+.row{
+    color: #fff;
+    display: flex;
+    margin: 1% 0 1% 0;    
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.col, .col-2, .col-3{
+    padding: 2%;    
+    background-color: #659DA1;
+}
+
+.col{
+    flex: 1;
+}
+
+.col-2{
+    flex: 2;
+}
+.col-3{
+    flex: 3;
 }

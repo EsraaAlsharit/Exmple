@@ -23,12 +23,12 @@ The Story: We want an app that once it measures a kid's height, can display whet
 
 TIP: If you get stuck, that's ok! Keep tinkering with it. Use the pages in this course to help you out.
 
-*_Stretch Feature 1_*
+**Stretch Feature 1**
 
 Adjust the conditional statement to require both height and age.
 
-*_Stretch Feature 2_*
+**Stretch Feature 2**
 
 Adjust the conditional statement to require either height requirement or age requirement must be met.
 
-NOTE: Google is your friend here for Stretch 2. See what you can tinker and build.
+**NOTE:** Google is your friend here for Stretch 2. See what you can tinker and build.

@@ -78,8 +78,12 @@ function timesTwoAgain(num) {
     return y;
 }
 var result = timesTwoAgain(3) + timesTwoAgain(5);
-console.log('result is', result);copy
-Code Snippet 7
+console.log('result is', result);
+````
+
+### Code Snippet 7
+
+```md
 function sumNums(num1, num2) {  
    return num1+num2;
 }

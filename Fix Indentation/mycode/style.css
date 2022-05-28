@@ -1,0 +1,30 @@
+/* by default div and body always has display: block
+so it let the element inside it take the space from the most left to the most right
+
+the body has margining 8px by default that's why we have that space if you want is all you could put margin auto;  */
+body{
+    /* margin: 8px; */
+    /* display: block; */
+}
+div{
+    /* display: block; */
+}
+
+.block{
+    background-color: brown;
+    justify-content: center;
+}
+
+/* if we make the display flex and you put one element inside although the style of the div is flex, if nothing beside it, it will be like display block because nothing is sharing the spaces with it
+but if you put another one it will be side by side 
+and then you could style by using  justify-content
+ justify-content: always go with display flex
+ if you put  justify-content: without display flex it will not work
+ but maybe in some cease will 
+  */
+.flex{
+  /* display: flex; */
+  background-color: blue;
+  justify-content: space-around;
+    
+}

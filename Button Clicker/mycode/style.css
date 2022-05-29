@@ -9,7 +9,7 @@
 }
 *{
     font-family: 'Monolog', sans-serif;
-    /* outline: dotted red; */
+    outline: dotted red;
 }
 strong{
     font-family:  sans-serif;
@@ -52,7 +52,7 @@ margin-top: 2%;
     border: 5px solid black;
     margin-bottom: 5%;
     padding: 3%;
-    column-gap: 5%;
+    column-gap: 2%;
 
 }
 .adds{
@@ -61,8 +61,11 @@ margin-top: 2%;
 }
 
 .info{
-    
-    width: 30%;   
+    width: 25%;   
+}
+
+.info h2{
+    margin-top: 0;
 }
 
 .details{

@@ -17,4 +17,4 @@ We may also need the video to be `muted` as modern browsers want users to intera
 
 - [x] Add a `<video>` into the existing project
 
--[x] When hovering the video it should preview the content by playing the video on mute
+- [x] When hovering the video it should preview the content by playing the video on mute

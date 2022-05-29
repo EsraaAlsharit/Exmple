@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Monolog';
+    src: local('Monolog SemiBold'), local('Monolog-SemiBold'),
+        url('Monolog-SemiBold.woff2') format('woff2'),
+        url('Monolog-SemiBold.woff') format('woff'),
+        url('Monolog-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    font-family: 'Monolog', sans-serif;
+    outline: dotted red;
+}
+strong{
+    font-family:  sans-serif;
+}
+body{
+    margin: auto;
+}
+.container{
+    padding: 0% 25%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #CCCCCC;
+    padding: 3%;
+
+}
+
+.main{
+display: flex;
+justify-content: space-between;
+column-gap: 2%;
+margin-top: 2%;
+}
+.content{
+    width: 70%;
+
+}
+.side_content{
+    width: 30%;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid black;
+    margin-bottom: 5%;
+}
+.adds{
+    border: 5px solid black;
+    padding: 5%;
+}
+
+.info{
+    padding: 3%;
+    width: 50%;   
+}
+
+.details{
+    padding: 3%;
+}
+
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    color: #000;
+    background-color: #FFD966;
+    font-weight: bold;
+    
+}
+
+#add{
+    background-color: #93c47d;
+    font-size: 1.6em;
+    
+}
+.nav-btn{
+    background-color: #2B78E4;
+    /* font-size: ; */
+    color: #fff; 
+}
+
+#search{
+
+    
+}
+
+

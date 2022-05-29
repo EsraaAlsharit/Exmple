@@ -10,6 +10,6 @@ For example, the function call `greet("Anakin")` would log to the console, `Good
 
 - [x] Create a function that, given a name, will say "good day" to that person by name.
 
-- [] Further customize your function by including the time of day in your greeting.
+- [x] Further customize your function by including the time of day in your greeting.
 
 - [x] Further customize your code to to say, "I'm coming for you, Dooku!" if your function is called with "Count Dooku".

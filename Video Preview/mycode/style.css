@@ -1,4 +1,14 @@
-* {
+@font-face {
+    font-family: 'Monolog';
+    src: local('Monolog SemiBold'), local('Monolog-SemiBold'),
+        url('Monolog-SemiBold.woff2') format('woff2'),
+        url('Monolog-SemiBold.woff') format('woff'),
+        url('Monolog-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    font-family: 'Monolog', sans-serif;
     padding: 0;
     margin: 0;
 }

@@ -48,4 +48,4 @@ Create a `function` called **pizzaOven**. We should feel free to customize what 
 
 - [x] Create 2 more pizzas with any toppings we like!
 
-**Bonus Challenge:** Create a `function` called randomPizza that uses `Math.random()` to create a random pizza!
+- [x] **Bonus Challenge:** Create a `function` called randomPizza that uses `Math.random()` to create a random pizza!

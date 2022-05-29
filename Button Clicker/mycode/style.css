@@ -9,7 +9,7 @@
 }
 *{
     font-family: 'Monolog', sans-serif;
-    outline: dotted red;
+    /* outline: dotted red; */
 }
 strong{
     font-family:  sans-serif;

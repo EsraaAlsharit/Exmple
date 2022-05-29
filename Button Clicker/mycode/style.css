@@ -9,7 +9,7 @@
 }
 *{
     font-family: 'Monolog', sans-serif;
-    outline: dotted red;
+    /* outline: dotted red; */
 }
 strong{
     font-family:  sans-serif;
@@ -51,6 +51,9 @@ margin-top: 2%;
     justify-content: space-around;
     border: 5px solid black;
     margin-bottom: 5%;
+    padding: 3%;
+    column-gap: 5%;
+
 }
 .adds{
     border: 5px solid black;
@@ -58,12 +61,12 @@ margin-top: 2%;
 }
 
 .info{
-    padding: 3%;
-    width: 50%;   
+    
+    width: 30%;   
 }
 
 .details{
-    padding: 3%;
+    width: 70%; 
 }
 
 .btn{
@@ -71,17 +74,24 @@ margin-top: 2%;
     color: #000;
     background-color: #FFD966;
     font-weight: bold;
+    width: 100%;
+    font-size: larger;
+    font-weight: bold;
     
 }
 
 #add{
     background-color: #93c47d;
-    font-size: 1.6em;
+    width: 100%;
+    font-size: larger;
+    font-weight: bold;
     
 }
 .nav-btn{
     background-color: #2B78E4;
     /* font-size: ; */
+    font-size: medium;
+    width:  10%;
     color: #fff; 
 }
 

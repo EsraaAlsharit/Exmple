@@ -9,10 +9,10 @@
   /* Fixed width container class that will "auto-center" itself */
 .container {
     width: 1200px;
-    margin: 0 auto;
+    margin: 1% auto;
 }
 
-.btn{
+.coolbtn{
     font-weight: bold;
     border: 2px solid #00D1B2;
     /* border-style: solid; */
@@ -26,6 +26,7 @@
     color: #fff;
     display: flex;
     margin: 1% 0 1% 0;    
+    
     justify-content: space-between;
     column-gap: 30px;
 }
@@ -43,4 +44,40 @@
 }
 .col-3{
     flex: 3;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1% 10%;
+    
+    background-color: #333333;
+}
+.nav-title{
+    color: #fff;
+}
+
+.nav-links{
+    list-style-type: none;
+    display: flex; 
+    width: 35%;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    border: 3px solid #000;
+    background-color: #17A2B8;
+    color: #fff;
+    
+    font-size: medium;
+}
+a{
+    color: #B7B7B7;
+    text-decoration: none;  
+}
+a.active{
+    font-weight: bold;
+    color: #fff;
 }

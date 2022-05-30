@@ -9,7 +9,10 @@
 }
 *{
     font-family: 'Monolog', sans-serif;
-    outline: dotted red;
+    /* outline: dotted red; */
+}
+.font{
+    font-family: sans-serif;
 }
 body{
     margin: auto;
@@ -32,8 +35,6 @@ body{
 .main{
     display: flex;
     justify-content: space-between;
-    column-gap: 1%;
-    margin-top: 2%;
     }
 
 .side-content{

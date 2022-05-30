@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>DojoWeather</title>
+</head>
+
+<body>
+    <div class="nav">
+        <h1 class="nav-title">DojoWeather</h1>
+        <ul class="nav-links">
+            <li><a href="#" onclick="report();">Burbank</a></li>
+            <li><a href="#" onclick="report();">Chicago</a></li>
+            <li><a href="#" onclick="report();">Dallas</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="top">
+            <h2>San Jose</h2>
+            <div class="filter">
+                <p><strong> show temperature in </strong></p>
+                <select name="" id="" onchange="convert(this);">
+                    <option value="C">°C</option>
+                    <option value="F">°F</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="cal">
+
+
+            <div class="card">
+                <h2 class="day">
+                    Today
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_rain.png" alt="" class="img">
+                    <h3>some rain</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>24</span>°
+                    </p>
+                    <p class="blue">
+                        <span>18</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Tomorrow
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_sun.png" alt="" class="img">
+                    <h3>some sun</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>27</span>°
+                    </p>
+                    <p class="blue">
+                        <span>19</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Friday
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_clouds.png" alt="" class="img">
+                    <h3>some clouds</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>21</span>°
+                    </p>
+                    <p class="blue">
+                        <span>16</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Saturday
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_sun.png" alt="" class="img">
+                    <h3>some sun</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>26</span>°
+                    </p>
+                    <p class="blue">
+                        <span>21</span>°
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- <div class="cal">
+
+
+            <div class="card">
+                <h2 class="day">
+                    Today
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_rain.png" alt="" class="img">
+                    <h3>some rain</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>24</span>°
+                    </p>
+                    <p class="blue">
+                        <span>18</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Tomorrow
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_sun.png" alt="" class="img">
+                    <h3>some sun</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>27</span>°
+                    </p>
+                    <p class="blue">
+                        <span>19</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Friday
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_clouds.png" alt="" class="img">
+                    <h3>some clouds</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>21</span>°
+                    </p>
+                    <p class="blue">
+                        <span>16</span>°
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="day">
+                    Saturday
+                </h2>
+                <div class="icon">
+                    <img src="assets/some_sun.png" alt="" class="img">
+                    <h3>some sun</h3>
+                </div>
+                <div class="dgree">
+                    <p class="red">
+                        <span>26</span>°
+                    </p>
+                    <p class="blue">
+                        <span>21</span>°
+                    </p>
+
+                </div>
+            </div>
+
+        </div> -->
+
+
+
+    </div>
+
+    <div class="cookies">
+        <div>
+            <img src="assets/cookie.png" alt="" srcset="">
+        </div>
+        <div>
+            <h3>Stop! Cookies Time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
+                features and to analyses our traffic. <a href="">Read more</a></p>
+        </div>
+        <button class="btn" onclick="hide(this)">I Accept</button>
+    </div>
+</body>
+
+</html>

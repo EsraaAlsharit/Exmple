@@ -1,0 +1,111 @@
+*{
+    margin: auto;
+    /* outline: dotted red; */
+}
+hr{
+    margin: 0% 12%;
+}
+.nav-links{
+    width: 30%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    background-color: #9FC5F8;
+    color: #fff;
+    padding:1% 10%;
+    display: flex;
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;  
+    font-size: x-large;
+}
+.container{
+    padding:0% 10%;
+
+}
+.filter{
+    width: 18%;
+    display: flex;
+
+    justify-content: space-between;
+}
+select{ 
+    color: black;
+    border: 2px solid #000;
+}
+.filter > *{
+margin: 1%;
+}
+
+.top{
+    display: flex;
+    padding: 2% 0%;
+    column-gap: 25%;
+    justify-content: space-between;
+}
+
+.cal{
+    padding: 2% 13%;
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+}
+.card{
+    background-color: #EEEEEE;
+    text-align: center;
+    
+}
+
+.day{
+    margin: 5% 0%;
+}
+
+.dgree{
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 0%;
+}
+.icon{
+    margin: 10% 0%;
+}
+.img{
+    width: 60%;
+    border-radius: 100%;
+    margin: 10% 0%;
+}
+span{
+    font-size: large;
+    font-weight: bold;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: dodgerblue;
+}
+
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    border: 3px solid #000;
+    background-color: #9FC5F8;
+    
+    
+    width: 15%;
+}
+
+.cookies{
+    margin: 0% 20%;
+    padding: 1% 5%;
+    border: 5px solid #000;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5%;
+    align-items: center;
+    position: fixed;
+    bottom: 1%;
+}

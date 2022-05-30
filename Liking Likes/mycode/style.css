@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Monolog';
+    src: local('Monolog SemiBold'), local('Monolog-SemiBold'),
+        url('Monolog-SemiBold.woff2') format('woff2'),
+        url('Monolog-SemiBold.woff') format('woff'),
+        url('Monolog-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+*{
+    font-family: 'Monolog', sans-serif;
+    outline: dotted red;
+}
+body{
+    margin: auto;
+}
+
+.nav{
+    background-color: #000;
+    display: flex;
+    padding: 0% 5%;
+}
+
+.nav-title{
+    color: #fff;
+}
+
+.container{
+    padding: 0% 30%;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1%;
+    margin-top: 2%;
+    }
+
+.side-content{
+    width: 30%;
+}
+
+.content{
+    width: 60%;
+}
+
+p{
+    font-weight: bold;
+}
+
+.user{
+    width: 50%;
+}
+
+.card{
+    border: 5px solid black;
+    padding:5% 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.card-header{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.card-body{
+    text-align: left;
+    
+}
+
+h2{
+text-align: center;
+}
+#name, #addpic, #pic{
+    margin: 20% 0%;
+}
+
+.btn{
+    box-shadow: 3px 3px 0px 1px #000;
+    color: #000;
+    background-color: #FFD966;
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+

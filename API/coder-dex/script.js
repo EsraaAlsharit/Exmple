@@ -18,10 +18,9 @@ function makecard(data) {
 }
 //async to make js wait the response 
 async function search() {
-    var cardsDiv = document.querySelector("#card");
-    var resp = await fetch("https://api.github.com/users/" + currentname);
+    var cardsDiv = document.querySelector("#card");//html
+    var resp = await fetch("https://api.github.com/users/" + currentname);//API
     var data = await resp.json();
-    // cardsDiv.innerText = "";
     cardsDiv.innerHTML = makecard(data) + cardsDiv.innerHTML;
 
 }

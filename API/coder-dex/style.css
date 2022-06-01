@@ -1,0 +1,21 @@
+.card{
+    height: 200px;
+    width: 500px;
+    padding: 20px;
+    margin: 5%;
+    background-color: cadetblue;
+    align-items: center;
+    display: flex;
+    border: 2px solid cornflowerblue;
+    justify-content: space-around;
+
+}
+
+.card img{
+    border-radius: 50%;
+    height: 128px;
+}
+
+.info{
+
+}

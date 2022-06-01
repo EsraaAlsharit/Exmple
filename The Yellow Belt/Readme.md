@@ -11,7 +11,7 @@
 
 Notes:
 
-- The pictures used are available for download images.zip
+- The pictures used are available for download [images.zip](https://s3.us-east-1.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/1617143155__images.zip)
 - Work on the exercise above and upload your code/files. (Please .zip/compress your exam files before uploading)
 - To prevent other students from copying your work, please make sure your code is not saved on GitHub or any file-sharing site.
 - To minimize score deduction, please make sure you upload the complete requirements (HTML, CSS, JS, images).

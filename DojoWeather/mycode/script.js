@@ -20,6 +20,7 @@ function convert(e) {
     //         degrees[index].innerText = parseInt((parseInt(degrees[index].innerText) - 32) * 5 / 9);
     //     }
     // }
+    document.getElementsByClassName
 
     degrees.forEach(degrees => {
         if (e.value == "F") {

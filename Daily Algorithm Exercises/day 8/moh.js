@@ -38,9 +38,6 @@ function flatten2dArray(twoDimArr) {
         }else{
             count1++;
         }
-
-
-        // console.log("s")
     }
     console.log(temp)
     return temp;

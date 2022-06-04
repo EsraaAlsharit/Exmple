@@ -9,6 +9,7 @@ Directions
 - Using comments (use two forward slashes --> //), Answer the predict questions. 
 - Zip and upload the file. 
 <hr>
+
 **Predict 1:** What will console.log state when this function is called?
 
 ```md

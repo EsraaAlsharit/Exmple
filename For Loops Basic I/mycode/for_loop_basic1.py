@@ -9,9 +9,9 @@ for x in range(5, 1001, 5):
 print("\nCounting, the Dojo Way")
 
 for x in range(1, 101):
-    if x % 5==0:
+    if x % 10==0:
         print("Coding")
-    elif x % 10==0:
+    elif x % 5==0:
         print("Coding Dojo")
 
 print("\nWhoa. That Sucker's Huge")

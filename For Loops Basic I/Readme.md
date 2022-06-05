@@ -25,4 +25,4 @@ Create a Python file called for_loop_basic1.py that performs the following tasks
 
 - [x] Countdown by Fours
 
-- [ ] Flexible Counter
+- [x] Flexible Counter

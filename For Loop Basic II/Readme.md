@@ -30,20 +30,20 @@
 9. **Reverse List** - Create a function that takes a list and return that list with values reversed. Do this without creating a second list. (This challenge is known to appear during basic technical interviews.)
     - Example: reverse_list([37,2,1,-9]) should return [-9,1,2,37]
 
-- [ ] Biggie Size
+- [x] Biggie Size
 
-- [ ] Count Positives
+- [x] Count Positives
 
-- [ ] Sum Total
+- [x] Sum Total
 
-- [ ] Average
+- [x] Average
 
-- [ ] Length
+- [x] Length
 
-- [ ] Minimum
+- [x] Minimum
 
-- [ ] Maximum
+- [x] Maximum
 
-- [ ] Ultimate Analysis
+- [x] Ultimate Analysis
 
-- [ ] Reverse List
+- [x] Reverse List

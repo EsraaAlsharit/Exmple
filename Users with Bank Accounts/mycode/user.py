@@ -1,9 +1,10 @@
 from BankAccount import BankAccount
 
 class User:
-    def __init__(self, name):  # now our method has 2 parameters!
-        self.name = name			# and we use the values passed in to set the name attribute
-        self.account= BankAccount()
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.02, balance=0)
 
     def make_withdrawal(self, amount):
         self.account.withdraw(amount)
@@ -23,8 +24,8 @@ class User:
         other_user.make_deposit(amount)
         
 
-u1 = User("Esraa")
-u1.make_deposit(20).make_deposit(16).make_deposit(6).make_withdrawal(10)
+u1 = User("Esraa","esraa@gmail.com")
+u1.make_deposit(300).make_deposit(600).make_deposit(500).make_withdrawal(140)
 u1.display_user_balance()
 
 

@@ -33,5 +33,5 @@ print(self.account.balance) # or access its attributes
 
 - [x] Update the User class display_user_balance method
 
-- [x] SENSEI BONUS: Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
+- [ ] SENSEI BONUS: Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
 

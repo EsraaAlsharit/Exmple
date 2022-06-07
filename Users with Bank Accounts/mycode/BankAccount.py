@@ -2,6 +2,7 @@ class BankAccount:
     def __init__(self, int_rate=10, balance=2000):
         self.balance = balance
         self.int_rate= int_rate
+        
 
     def deposit(self, amount):
         self.balance += amount

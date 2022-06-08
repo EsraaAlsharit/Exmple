@@ -1,0 +1,16 @@
+#wallpaper{
+    display: inline-flex;
+    justify-content: space-evenly;
+
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: #9FC5F8;
+}
+
+h1{
+    text-align: center;
+}

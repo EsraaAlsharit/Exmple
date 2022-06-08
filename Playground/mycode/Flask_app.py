@@ -10,15 +10,18 @@ app = Flask(__name__)
 def dojo():
     return render_template('index.html')
 
-
 # for a route '/users/____/____', two parameters in the url get passed as username and id
+
+
 @app.route('/play/<num>')
 def mulBox(num):
-    return render_template('index.html',_num=int(num))
+    return render_template('index.html', _num=int(num))
+
 
 @app.route('/play/<num>/<color>')
-def mulBoxStyle(num,color):
-    render_template('index.html', _color=color, _num=int(num))
+def mulBoxStyle(num, color):
+    return render_template('index.html', _color=color, _num=int(num))
+
 
 @app.route('/<any>')
 def error(any):

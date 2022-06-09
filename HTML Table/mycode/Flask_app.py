@@ -11,7 +11,6 @@ users = [
     {'first_name': 'KB', 'last_name': 'Tonel'}
 ]
 
-
 @app.route('/')
 def index():
     print(users[0]["first_name"])

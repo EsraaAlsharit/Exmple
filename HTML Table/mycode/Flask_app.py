@@ -14,7 +14,8 @@ users = [
 
 @app.route('/')
 def index():
-    return 'Hello World!'  # Return the string 'Hello World!' as a response
+    print(users[0]["first_name"])
+    return render_template('index.html', _users=users)
 # import statements, maybe some other routes
 
 
@@ -28,10 +29,6 @@ def dojo():
 def hello(num, word):
     return render_template('index.html', _word=word, _num=int(num))
 
-
-@app.route('/<any>')
-def error(any):
-    return "Sorry! No response. Try again."
 
 
 if __name__ == "__main__":   # Ensure this file is being run directly and not from a different module

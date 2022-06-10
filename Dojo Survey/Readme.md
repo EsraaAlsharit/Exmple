@@ -17,7 +17,7 @@ When you build this, please make sure that your program meets the following crit
 
     - http://localhost:8000 - have this display a nice looking HTML form.  The form should be submitted to '/result'
     - http://localhost:8000/result - have this display an HTML page with the information that was submitted by POST
-    
+
 **Don't forget that any inputs we want to be able to access from the form submission need to have a name!**
 
 It's always a good idea to print request.POST to see if the form is delivering all the information you need in your routing method.
@@ -30,6 +30,6 @@ It's always a good idea to print request.POST to see if the form is delivering a
 
 - [x] NINJA BONUS: Use a CSS framework to style your form
 
-- [x] NINJA BONUS: Include a set of radio buttons on your form
+- [ ] NINJA BONUS: Include a set of radio buttons on your form
 
-- [x] SENSEI BONUS: Include a set of checkboxes on your form
+- [ ] SENSEI BONUS: Include a set of checkboxes on your form

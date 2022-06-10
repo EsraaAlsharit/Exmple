@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 # The "@" decorator associates this route with the function immediately following
 
-
 @app.route('/')  # url
 def index():
     # Return the string 'Hello World!' as a response

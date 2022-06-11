@@ -1,7 +1,24 @@
+class Animal:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        self.health = 20
+        self.happiness = 10
 
-from Lion import Lion
-from Tiger import Tiger
+    def display_info(self):
+        print(f'Name: {self.name} | Health: {self.health} | Happiness: {self.happiness}')
 
+class Lion(Animal):
+    def __init__(self,name) -> None:
+        super().__init__(name,age = 5)
+        self.health = 50
+        self.happiness = 12
+
+class Tiger(Animal):
+    def __init__(self,name) -> None:
+        super().__init__(name,age = 3)
+        self.health = 40
+        self.happiness = 7
 
 class Zoo:
     def __init__(self, zoo_name):

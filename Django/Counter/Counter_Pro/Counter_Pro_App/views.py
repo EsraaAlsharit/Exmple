@@ -1,10 +1,16 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 
 def index(request):
-    if 'key_name' in request.session:
-        print('key exists!')
+    if 'counter' in request.session:
+        request.session['counter'] += 1
     else:
-        print("key 'key_name' does NOT exist")
+        request.session['counter'] = 1
 
-    return HttpResponse("this is the equivalent of @app.route('/')!")
+    return render(request, "index.html")
+
+
+def destroy(request):
+    del request.session['counter']
+    return redirect("/")
+    # return redirect("index")

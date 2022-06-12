@@ -28,12 +28,19 @@ def FirstPlusLength(li):
 
 
 print(FirstPlusLength([1, 2, 3, 4, 5]))
+
 print("\nValues Greater than Second")
 
 
 def GreaterSecond(li):
-    for x in range(len(li)):
-        pass
+    arr = []
+    if len(li) <= 1:
+        return False
+    for i in li:
+        if li[i] > li[1]:
+            arr.append(li[i])
+            print(len(arr))
+            return arr
 
 
 print(GreaterSecond([5, 2, 3, 2, 1, 4]))

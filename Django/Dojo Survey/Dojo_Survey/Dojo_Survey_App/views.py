@@ -8,6 +8,7 @@ def index(request):
 def result(request):
     print("Got Post Info....................")
     name_from_form = request.POST['name']
+    # request._post[]
     loc_from_form = request.POST['loc']
     lang_from_form = request.POST['lang']
     comm_from_form = request.POST['comm']

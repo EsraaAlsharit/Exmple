@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="p-5 text-center  center">
+            <h1>Welcome to the Great Number Game</h1>
+            <p>I am thinking of a number between 1 to 100</p>
+            <p>Take a guess!</p>
+            {% if num %}
+            <div class="rus {{ bg }} card h1 m-lg-5 p-lg-5 text-white justify-content-center">
+                <div class="">
+                    {% if num == "high" %}
+                    Too high!
+                    {% elif num == "low" %}
+                    Too low!
+                    {% else%}
+                    {{ num }}
+                    <br>
+                    <form action="reset" method="post">
+                        {% csrf_token %}
+                        <input class="m-2 btn btn-light" type="submit" value="try again!">
+                    </form>
+
+                    {%endif %}
+                </div>
+
+            </div>
+            {%endif %}
+            <form action="/" method="post">
+                {% csrf_token %}
+                <input type="number" name="num" value=""><br>
+                <input type="submit" value="submit" class="m-2 btn btn-primary">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

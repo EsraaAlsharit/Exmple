@@ -61,7 +61,7 @@
         <div class="form-group">
             <label for="">Activities</label><br>
             <div name="log" class="card">
-                {% for i in log %}
+                {% for i in  request.session.log %}
                 <p class="m-0">
                     {{ i }}</p>
                 {%endfor%}

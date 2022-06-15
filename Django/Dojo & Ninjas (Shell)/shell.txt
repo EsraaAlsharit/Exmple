@@ -1,0 +1,53 @@
+python manage.py makemigrations
+
+python manage.py migrate
+
+from dojo_ninjas_app.models import *
+
+Dojos.objects.create(name="Rumble Dojo",city="U.S",state="texas")
+Dojos.objects.create(name="Master Kickers Karate",city="U.S",state="florida")
+Dojos.objects.create(name="Persistence Dojo",city="U.S",state="NY")
+
+obj= Dojos.objects.get(id=1)
+
+obj.delete()
+
+obj= Dojos.objects.get(id=2)
+
+obj.delete()
+
+obj= Dojos.objects.get(id=3)
+
+obj.delete()
+
+
+Dojos.objects.create(name="Small Children Safety",city="U.S",state="Washington")
+Dojos.objects.create(name="coding Dojo",city="U.S",state="california")
+Dojos.objects.create(name="Smooth Moves Dojo",city="U.S",state="Alaska")
+
+Ninja.objects.create(dojo=Dojos.objects.get(id=5),fname="Esraa",lname="alsharit")
+Ninja.objects.create(dojo=Dojos.objects.get(id=5),fname="Sara",lname="alsharit")
+Ninja.objects.create(dojo=Dojos.objects.get(id=5),fname="Eman",lname="alsharit")
+
+Ninja.objects.create(dojo=Dojos.objects.get(id=6),fname="Radh",lname="alsharit")
+Ninja.objects.create(dojo=Dojos.objects.get(id=6),fname="Ali",lname="alaesa")
+Ninja.objects.create(dojo=Dojos.objects.get(id=6),fname="Ahmed",lname="alaesa")
+
+Ninja.objects.create(dojo=Dojos.objects.get(id=4),fname="Reem",lname="Jasim")
+Ninja.objects.create(dojo=Dojos.objects.get(id=4),fname="Shaed",lname="Jasim")
+Ninja.objects.create(dojo=Dojos.objects.get(id=4),fname="Duaa",lname="Jasim")
+
+//Ninja.objects.filter(dojo=Dojos.objects.get(id=4))
+Ninja.objects.filter(dojo=Dojos.objects.first())
+
+Ninja.objects.filter(dojo=Dojos.objects.last())
+
+Ninja.objects.last()
+
+exit()
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+
+Dojos.objects.create(name="Master Kickers Karate",city="U.S",state="florida", desc="new dojo")

@@ -1,0 +1,63 @@
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py shell
+
+from books_authors_app.models import *
+
+
+Book.objects.create(title="C Sharp", desc="")
+Book.objects.create(title="Java",desc="")
+Book.objects.create(title="Python",desc="")
+Book.objects.create(title="PHP",desc="")
+Book.objects.create(title="Ruby",desc="")
+
+
+Author.objects.create(fname="Jane", lname="Austen")
+Author.objects.create(fname="Emily",lname="Dickinson")
+Author.objects.create(fname="Fyodor",lname="Dostoevsky")
+Author.objects.create(fname="William",lname="Shakespeare")
+Author.objects.create(fname="Lau",lname="Tzu")
+
+this_book = Book.objects.get(id=1)
+this_book.title="C#"
+this_book.save()
+
+this_author = Author.objects.get(id=4)
+this_author.fname="Bill"
+this_author.save()
+
+this_author = Author.objects.get(id=1)
+>>> this_author.books.add(Book.objects.get(id=1))
+>>> this_author.books.add(Book.objects.get(id=2))
+this_author = Author.objects.get(id=2)
+>>> this_author.books.add(Book.objects.get(id=1))
+>>> this_author.books.add(Book.objects.get(id=2))
+>>> this_author.books.add(Book.objects.get(id=3))
+>>> this_author = Author.objects.get(id=3)
+>>> this_author.books.add(Book.objects.get(id=1))
+>>> this_author.books.add(Book.objects.get(id=2))
+>>> this_author.books.add(Book.objects.get(id=3))
+>>> this_author.books.add(Book.objects.get(id=4))
+>>> this_author = Author.objects.get(id=4)
+this_author.books.add(Book.objects.get(id=1))
+this_author.books.add(Book.objects.get(id=2))
+this_author.books.add(Book.objects.get(id=3))
+this_author.books.add(Book.objects.get(id=4))
+this_author.books.add(Book.objects.get(id=5))
+
+
+this_book = Book.objects.get(id=3)
+this_book.books.all()
+
+
+this_book.books.remove(Author.objects.get(id=1))
+
+this_author =Author.objects.create(fname="Esraa",lname="Alsharit")
+this_author.books.add(Book.objects.get(id=2))
+
+this_author = Author.objects.get(id=3)
+this_author.books.all()
+
+this_author = Author.objects.get(id=5)

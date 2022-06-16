@@ -1,4 +1,5 @@
 # Assignment: Books/Authors (Shell)
+
 ### Objectives:
 
 - Practice using the Django Shell to run ORM commands to manipulate our database
@@ -27,24 +28,24 @@ Create a new project called books_authors_proj and an app called books_authors_a
 
 - [x] Query: Change the name of the C Sharp book to C#
 
-Query: Change the first name of the 4th author to Bill
+- [x] Query: Change the first name of the 4th author to Bill
 
-Query: Assign the first author to the first 2 books
+- [x] Query: Assign the first author to the first 2 books
 
-Query: Assign the second author to the first 3 books
+- [x] Query: Assign the second author to the first 3 books
 
-Query: Assign the third author to the first 4 books
+- [x] Query: Assign the third author to the first 4 books
 
-Query: Assign the fourth author to the first 5 books (or in other words, all the books)
+- [x] Query: Assign the fourth author to the first 5 books (or in other words, all the books)
 
-Query: Retrieve all the authors for the 3rd book
+- [x] Query: Retrieve all the authors for the 3rd book
 
-Query: Remove the first author of the 3rd book
+- [x] Query: Remove the first author of the 3rd book
 
-Query: Add the 5th author as one of the authors of the 2nd book
+- [x] Query: Add the 5th author as one of the authors of the 2nd book
 
-Query: Find all the books that the 3rd author is part of
+- [x] Query: Find all the books that the 3rd author is part of
 
-Query: Find all the authors that contributed to the 5th book
+- [x] Query: Find all the authors that contributed to the 5th book
 
-Submit your .txt file that contains all the queries you ran in the shell
+- [x] Submit your .txt file that contains all the queries you ran in the shell

@@ -1,6 +1,6 @@
-Assignment: Books/Authors with Templates
-Objectives:
-Practice incorporating a many-to-many relationship in a full-stack application
+# Assignment: Books/Authors with Templates
+### Objectives:
+- Practice incorporating a many-to-many relationship in a full-stack application
 Using the same project from the previous assignment, create an application that does the following:
 
 

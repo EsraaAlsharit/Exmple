@@ -14,16 +14,16 @@
     <div class="container my-3">
         <h1>{{authors.fname }} {{ authors.lname }}</h1>
         <ul class="list-unstyled">
-            <li>ID:<span>{{authors.id }}</span></li>
+            <li>ID:<span> {{authors.id }}</span></li>
             <li>
-                Notes:<span>{{authors.notes }}</span>
+                Notes:<strong> {{authors.notes }}</strong>
             </li>
             <li>Books:
-                <ul class="list-unstyled">
+                <ul>
                     {% for i in authors.books.all %}
                     <li>{{ i.title }}</li>
                     {% endfor %}
-                    <li>
+                    <li class="list-unstyled">
                         <form action="../addBookTo" method="post">
                             {% csrf_token %}
                             <input type="hidden" name="AID" value="{{ authors.id }}">

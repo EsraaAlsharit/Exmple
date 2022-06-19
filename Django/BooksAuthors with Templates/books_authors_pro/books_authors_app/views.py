@@ -48,14 +48,14 @@ def anthorditaitl(request, ID):
     return render(request, "details_author.html", context)
 
 
-def bookditaitl(request,ID):
-    Book = Author.objects.get(id=ID)
-    books = Book.objects.all()
+def bookditaitl(request, ID):
+    authors = Author.objects.all()
+    book = Book.objects.get(id=ID)
     context = {
-        'authors': Book,
-        'books': books
+        'authors': authors,
+        'book': book
     }
-    return render(request, "details_author.html", context)
+    return render(request, "details_book.html", context)
 
 
 def addBookTo(request):
@@ -63,3 +63,10 @@ def addBookTo(request):
         this_author = Author.objects.get(id=request.POST["AID"])
         this_author.books.add(Book.objects.get(id=request.POST["BID"]))
     return redirect("authors/{}".format(request.POST["AID"]))
+
+
+def addAuthorTo(request):
+    if request.method == 'POST':
+        this_author = Author.objects.get(id=request.POST["AID"])
+        this_author.books.add(Book.objects.get(id=request.POST["BID"]))
+    return redirect("/{}".format(request.POST["BID"]))

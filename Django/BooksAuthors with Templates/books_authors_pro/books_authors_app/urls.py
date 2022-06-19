@@ -7,5 +7,6 @@ urlpatterns = [
     path('addAuthor', views.addAuthor),
     path('authors/<ID>', views.anthorditaitl),
     path('addBookTo', views.addBookTo),
+    path('addAuthorTo', views.addAuthorTo),
     path('<ID>', views.bookditaitl)
 ]

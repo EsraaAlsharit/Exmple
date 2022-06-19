@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,38 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Book Details</title>
 </head>
+
 <body>
     <div class="container my-3">
-        <h1>{{ }}</h1>
+        <h1>{{ book.title }}</h1>
         <ul class="list-unstyled">
-            <li>ID:<span>{{ }}</span></li>
+            <li>ID:<span> {{ book.id }}</span></li>
             <li>
-                Description:<span>{{ }}</span>
+                Description:<strong> {{ book.desc }}</strong>
             </li>
             <li>Author:
-                <ul class="list-unstyled">
-                    <!-- for  -->
-                    <li>{{ }}</li>
-                    <!-- endfor -->
-                    <li>
-                        <select name="" id="">
-                            <!-- for a in author -->
-                            <option value="">
-                                <!-- a -->
-                            </option>
-                            <!-- endfor -->
-                        </select>
-                        <input type="submit" value="Add">
+                <ul>
+                    {% for i in book.books.all %}
+                    <li>{{ i.fname }}</li>
+                    {% endfor %}
+                    <li class="list-unstyled">
+                        <form action="../addAuthorTo" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="BID" value="{{ book.id }}">
+                            <select name="AID" id="">
+                                {% for author in authors %}
+                                <option value="{{ author.id }}">
+                                    {{ author.fname }} {{ author.lname }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Add">
+                        </form>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
 </body>
+
 </html>

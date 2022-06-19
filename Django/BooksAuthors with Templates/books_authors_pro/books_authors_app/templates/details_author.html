@@ -12,25 +12,30 @@
 
 <body>
     <div class="container my-3">
-        <h1>{{ }}</h1>
+        <h1>{{authors.fname }} {{ authors.lname }}</h1>
         <ul class="list-unstyled">
-            <li>ID:<span>{{ }}</span></li>
+            <li>ID:<span>{{authors.id }}</span></li>
             <li>
-                Notes:<span>{{ }}</span>
+                Notes:<span>{{authors.notes }}</span>
             </li>
-            <li>Bookd:
+            <li>Books:
                 <ul class="list-unstyled">
-                    <!-- for -->
-                    <li>{{ }}</li>
+                    {% for i in authors.books.all %}
+                    <li>{{ i.title }}</li>
+                    {% endfor %}
                     <li>
-                        <select name="" id="">
-                            <!-- for a in author -->
-                            <option value="">
-                                <!-- a -->
-                            </option>
-                            <!-- endfor -->
-                        </select>
-                        <input type="submit" value="Add">
+                        <form action="../addBookTo" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="AID" value="{{ authors.id }}">
+                            <select name="BID" id="">
+                                {% for book in books %}
+                                <option value="{{ book.id }}">
+                                    {{ book.title }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Add">
+                        </form>
                     </li>
                 </ul>
             </li>

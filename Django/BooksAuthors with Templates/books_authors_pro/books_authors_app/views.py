@@ -36,3 +36,30 @@ def addBook(request):
             desc=request.POST["desc"])
         this_book.save()
     return redirect("/")
+
+
+def anthorditaitl(request, ID):
+    Authors = Author.objects.get(id=ID)
+    books = Book.objects.all()
+    context = {
+        'authors': Authors,
+        'books': books
+    }
+    return render(request, "details_author.html", context)
+
+
+def bookditaitl(request,ID):
+    Book = Author.objects.get(id=ID)
+    books = Book.objects.all()
+    context = {
+        'authors': Book,
+        'books': books
+    }
+    return render(request, "details_author.html", context)
+
+
+def addBookTo(request):
+    if request.method == 'POST':
+        this_author = Author.objects.get(id=request.POST["AID"])
+        this_author.books.add(Book.objects.get(id=request.POST["BID"]))
+    return redirect("authors/{}".format(request.POST["AID"]))

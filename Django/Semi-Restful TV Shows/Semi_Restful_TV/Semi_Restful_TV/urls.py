@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path,include
 
 urlpatterns = [
-    path('shows', include('Semi_Restful_TV.urls')),
+    path('', include('Semi_Restful_TV_App.urls')),
     # path('admin/', admin.site.urls),
 ]

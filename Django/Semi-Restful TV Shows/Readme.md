@@ -2,10 +2,11 @@
 
 ### Objectives:
 
-Practice ORM queries from the controller
-Practice RESTful routing
-Practice rendering query results to templates
-Practice using form input to create table data
+- Practice ORM queries from the controller
+- Practice RESTful routing
+- Practice rendering query results to templates
+- Practice using form input to create table data
+<hr>
 Now that we've got a basic understanding of the flow between models, views, and templates, let's make sure we know how to implement all 4 CRUD commands!
 
 Remember that restful routing is simply a guideline of generally accepted routing naming conventions so other consumers of our routes can easily navigate our application and anticipate what the response will be for any given route. Since many web applications perform CRUD operations, you can imagine how confusing this could get if everyone followed different conventions for creating routing and method names for these operations.
@@ -16,20 +17,22 @@ Ultimately, it's up to you (or maybe your boss) whether you also follow these ru
 
 Create a new Django project following the specifications provided in this wireframe:
 
-Complete each of the following routes:
+![](crud_tvshows_django.png)
 
-/shows/new- GET - method should return a template containing the form for adding a new TV show
+- [x] Complete each of the following routes:
 
-/shows/create - POST - method should add the show to the database, then redirect to /shows/<id>
+- [x] /shows/new- GET - method should return a template containing the form for adding a new TV show
 
-/shows/<id> - GET - method should return a template that displays the specific show's information
+- [x] /shows/create - POST - method should add the show to the database, then redirect to /shows/<id>
 
-/shows - GET - method should return a template that displays all the shows in a table
+- [x] /shows/<id> - GET - method should return a template that displays the specific show's information
 
-/shows/<id>/edit - GET - method should return a template that displays a form for editing the TV show with the id specified in the url
+- [x] /shows - GET - method should return a template that displays all the shows in a table
 
-/shows/<id>/update - POST - method should update the specific show in the database, then redirect to /shows/<id>
+- [x] /shows/<id>/edit - GET - method should return a template that displays a form for editing the TV show with the id specified in the url
 
-/shows/<id>/destroy - POST - method should delete the show with the specified id from the database, then redirect to /shows
+- [x] /shows/<id>/update - POST - method should update the specific show in the database, then redirect to /shows/<id>
 
-Have your root route redirect to /shows
+- [x] /shows/<id>/destroy - POST - method should delete the show with the specified id from the database, then redirect to /shows
+
+- [x] Have your root route redirect to /shows

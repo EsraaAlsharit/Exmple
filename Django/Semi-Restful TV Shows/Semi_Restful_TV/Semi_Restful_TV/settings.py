@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Semi_Restful_TV',
+    'Semi_Restful_TV_App',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

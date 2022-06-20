@@ -24,23 +24,23 @@
                 </tr>
             </thead>
 
-            <!--  -->
+            {% for show in shows%}
             <tr>
                 <td>
-                    <a href="">{{ }}</a>
+                    <a href="shows/{{show.id}}">{{show.id }}</a>
                 </td>
-                <td>{{ }}</td>
-                <td>{{ }}</td>
-                <td>{{ }}</td>
+                <td>{{ show.title }}</td>
+                <td>{{ show.network }}</td>
+                <td>{{ show.releaseDate }}</td>
                 <td>
-                    <a href="{{  }}">Show</a>
-                    <a href="{{ }}">Edit</a>
-                    <a href="{{  }}">Delete</a>
+                    <a href="shows/{{show.id}}">Show</a>
+                    <a href="shows/{{show.id}}/edit">Edit</a>
+                    <a href="shows/{{show.id}}/destroy">Delete</a>
                 </td>
             </tr>
-            <!--  -->
+            {%endfor%}
         </table>
-        <a href="/new">Add a New Show</a>
+        <a href="shows/new">Add a New Show</a>
     </div>
 </body>
 

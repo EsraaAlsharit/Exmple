@@ -10,6 +10,8 @@ class ShowManager(models.Manager):
             errors["network"] = "network should be at least 3 characters"
         if len(postData['desc']) < 10:
             errors["desc"] = "Description should be at least 10 characters"
+        if len(postData['release_date']) < 0:
+            errors["release_date"] = "Release Date should be there"
         return errors
 
 

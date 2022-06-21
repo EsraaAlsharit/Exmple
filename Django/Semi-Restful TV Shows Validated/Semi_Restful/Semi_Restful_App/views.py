@@ -2,24 +2,25 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from Semi_Restful_App.models import Show
 
+
 def index(request):
     context = {
         'shows':  Show.objects.all()
     }
     return render(request, 'index.html', context)
 
+
 def AddShowTem(request):
     return render(request, 'add_show.html')
+
 
 def AddShow(request):
     # if request.method == 'POST':
     errors = Show.objects.basic_validator(request.POST)
     if len(errors) > 0:
-        # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
         for key, value in errors.items():
             messages.error(request, value)
-        # redirect the user back to the form to fix the errors
-        return redirect("../shows/create")
+        return redirect("/shows/new")
     else:
         show = Show.objects.create(
             title=request.POST['title'],
@@ -28,7 +29,7 @@ def AddShow(request):
             desc=request.POST['desc']
         )
         show.save()
-        messages.success(request, "Show successfully updated")
+        messages.success(request, "Show successfully Add")
         return redirect("../shows/{}".format(show.id))
 
 

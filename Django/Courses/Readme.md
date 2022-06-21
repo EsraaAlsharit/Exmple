@@ -8,9 +8,10 @@
 Make a new Django project and application, and complete the functionality of the wireframe below. Require the course name to be more than 5 characters and the description to be more than 15 characters.
 
 ### Bonus Features (Optional)
-    1. Make `description` a one-to-one relationship with the Course table rather than a column in the `course` table (intermediate).
-    2. Add an action _comment_ to each course that takes you to a page where you can add comments about that course and view all comments that have been entered (advanced)
-    Courses
+
+1. Make `description` a one-to-one relationship with the Course table rather than a column in the `course` table (intermediate).
+2. Add an action _comment_ to each course that takes you to a page where you can add comments about that course and view all comments that have been entered (advanced)
+Courses
 
 ![](mvc-courses.png)
 

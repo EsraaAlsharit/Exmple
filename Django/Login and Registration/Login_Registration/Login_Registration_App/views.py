@@ -46,6 +46,8 @@ def register(request):
 
 
 def Success(request):
+    if not 'user_id' in request.session:
+        return redirect('/')
     return render(request, 'result.html')
 
 

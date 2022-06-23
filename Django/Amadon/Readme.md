@@ -1,14 +1,15 @@
-Amadon
-Objectives:
-Practice handling POST data
-Avoid rendering after a POST request
-Be careful about what you put inside <form>tags
+# Amadon
+### Objectives:
+- Practice handling POST data
+- Avoid rendering after a POST request
+- Be careful about what you put inside `<form>`tags
+<hr>
 We've decided to start building our own e-commerce site called Amadon.
 
 The goal of this assignment is not to build a full-fledged e-commerce site (i.e. no login, validation, etc.). Rather, we want to point out some important things to consider when building forms:
 
-Why we don't want to render after a POST request (you may recall going over this when we were learning Flask)
-What we should put in our forms versus what should be handled by the server in the backend
+1. Why we don't want to render after a POST request (you may recall going over this when we were learning Flask)
+2. What we should put in our forms versus what should be handled by the server in the backend
 
 
 

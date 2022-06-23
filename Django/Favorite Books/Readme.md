@@ -30,7 +30,7 @@ title = models.CharField(max_length=255)
 # uploaded_by = user who uploaded a given book
 
 # users_who_like = a list of users who like a given book
-```
+````
 
 This is exactly what related_name provides!
 

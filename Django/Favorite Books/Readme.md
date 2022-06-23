@@ -1,34 +1,40 @@
 # Assignment: Favorite Books
+
 ### Objectives:
+
 - Practice one-to-many and many-to-many relationships
 <hr>
 Say we wanted to create a website where users can upload their favorite books and other users on the website can indicate whether that book is also one of their favorites. For the database diagram, we come up with the following, realizing that there can be more than one relationship between two tables:
 
-![ERD]()
+![ERD](favorite_books_ERD.png)
 
 Let's review the two distinct relationships between the users and books tables.
 
-- One is a one-to-many relationship because a user can upload many books, and a book can be uploaded by one user. In our database, the uploaded_by_id field (in the books table) stores this relationship. 
+- One is a one-to-many relationship because a user can upload many books, and a book can be uploaded by one user. In our database, the uploaded_by_id field (in the books table) stores this relationship.
 - The second relationship is a many-to-many relationship, where a given user can like many books, and a given book can be liked by many users. This relationship is stored in the third table. (In the diagram, this is the likes table.)
 
 If we retrieve a book from the database and want the associated user(s), how do we distinguish between these two different relationships? We may want the user who uploaded the book, or the users who like this book. Wouldn't it be nice if each class had some attributes like this:
 
- ```md
+```md
 class User(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-  # liked_books = a list of books a given user likes
-  # books_uploaded = a list of books uploaded by a given user
-    
+first_name = models.CharField(max_length=255)
+last_name = models.CharField(max_length=255)
+
+# liked_books = a list of books a given user likes
+
+# books_uploaded = a list of books uploaded by a given user
+
 class Book(models.Model):
-    title = models.CharField(max_length=255)
-  # uploaded_by = user who uploaded a given book
-  # users_who_like = a list of users who like a given book
-````
+title = models.CharField(max_length=255)
+
+# uploaded_by = user who uploaded a given book
+
+# users_who_like = a list of users who like a given book
+```
 
 This is exactly what related_name provides!
 
-![]()
+![code](related_nameMM.png)
 
 According to this,
 
@@ -39,7 +45,7 @@ According to this,
 
 Create an application that performs the following:
 
-![]()
+![](<Favorite_Books_(Django).png>)
 
 - [x] Create the User and Book models with all appropriate relationships
 

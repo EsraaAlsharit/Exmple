@@ -23,7 +23,9 @@
                     {% elif num == "low" %}
                     Too low!
                     {% else%}
+
                     {{ num }}
+                    <p>you submit {{ request.session.attempts }} attempts</p>
                     <br>
                     <form action="reset" method="post">
                         {% csrf_token %}

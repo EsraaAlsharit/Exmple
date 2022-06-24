@@ -13,19 +13,27 @@ def index(request):
         request.session['theNum'] = random.randint(1, 100)
     rus = ""
     print(request.session['theNum'])
-    # print(request.POST)
+
+    if not 'attempts' in request.session:
+        request.session['attempts'] = 1
+    print(request.session['attempts'])
     if request.POST != {}:
-        num = int(request.POST["num"])
-        if num > request.session['theNum']:
-            rus = "high"
-            bg = "bg-danger"
-        elif num < request.session['theNum']:
-            rus = "low"
-            bg = "bg-danger"
-        else:
-            rus = str(request.session['theNum'])+" was the number!"
-            bg = "bg-success"
-        print("your guess", num)
+
+        if 'num' in request.POST:
+            num = int(request.POST["num"])
+            if num > request.session['theNum']:
+                request.session['attempts'] += 1
+                rus = "high"
+                bg = "bg-danger"
+            elif num < request.session['theNum']:
+                rus = "low"
+                bg = "bg-danger"
+                request.session['attempts'] += 1
+            else:
+                rus = str(request.session['theNum'])+" was the number!"
+                bg = "bg-success"
+
+            print("your guess", num)
 
         context = {
             "num": rus,
@@ -40,5 +48,7 @@ def reset(request):
     # newNum = random.randint(1, 100)
     # theNum = newNum
     del request.session['theNum']
+    del request.session['attempts']
+
     num = ""
     return redirect("/")

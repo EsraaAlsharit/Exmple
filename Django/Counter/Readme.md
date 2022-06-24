@@ -38,10 +38,10 @@ del request.session['key_name']	# clears a specific key
 
 - [x] Add a "/destroy_session" route that clears the session and redirects to the root route. Test it.
 
-- [ ] NINJA BONUS: Add a Reset button that uses the "/destroy_session" route
+- [x] NINJA BONUS: Add a Reset button that uses the "/destroy_session" route
 
-- [ ] NINJA BONUS: Add a +2 button underneath the counter and a new route that will increment the counter by 2
+- [x] NINJA BONUS: Add a +2 button underneath the counter and a new route that will increment the counter by 2
 
-- [ ] SENSEI BONUS: Add a form that allows the user to specify the increment of the counter and have the counter increment accordingly
+- [x] SENSEI BONUS: Add a form that allows the user to specify the increment of the counter and have the counter increment accordingly
 
-- [ ] SENSEI BONUS: Adjust your code to display both how many times the user has actually visited the page, as well as the value of the counter, given the above functionality
+- [x] SENSEI BONUS: Adjust your code to display both how many times the user has actually visited the page, as well as the value of the counter, given the above functionality

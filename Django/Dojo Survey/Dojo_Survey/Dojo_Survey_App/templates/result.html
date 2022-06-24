@@ -17,6 +17,8 @@
                 <p>Name: {{name}}</p>
                 <p>Location: {{ location }}</p>
                 <p>Language: {{ language }}</p>
+                <p>Gander: {{ gander }}</p>
+                <p>Work:{% for i in work %}<span> {{ i }}</span>{%endfor%}</p>
                 <p>Commit: {{ commit }}</p>
             </div>
             <form action="/">

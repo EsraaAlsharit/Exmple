@@ -53,6 +53,14 @@ def logout(request):
     return redirect('/')
 
 
+def profile(request):
+    user = User.objects.get(id=request.session['user_id'])
+    context = {
+        "user": user
+    }
+    return render(request, "profile.html", context)
+
+
 def addBook(request):
     if not 'user_id' in request.session:
         return redirect('/')

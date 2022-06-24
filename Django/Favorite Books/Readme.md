@@ -65,4 +65,4 @@ Create an application that performs the following:
 
 - [x] NINJA BONUS: On the main page, if the logged in user has not favorited the book, there should be a link so the user can add it to their favorites. Otherwise, display a message indicating the book has already been favorited.
 
-- [ ] SENSEI BONUS: Add a user page that allows the user to view a list of all their favorite books
+- [x] SENSEI BONUS: Add a user page that allows the user to view a list of all their favorite books

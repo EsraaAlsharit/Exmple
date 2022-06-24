@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if messages %}
+    <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="container">
+        <div class="d-flex justify-content-between m-3">
+            <h1>Welcome, {{ user.fname }}!</h1>
+            <div class="d-flex justify-content-evenly w-50">
+                <a href="logout">Log out</a>
+                <a href="profile">Profile</a>
+            </div>
+        </div>
+        <hr>
+        <div class="col">
+            <h2>All My Favorite Book</h2>
+            {% for book in user.Favorite.all %}
+            <div class="row my-5">
+                <a href="/detailBook/{{ book.id }}">{{ book.title }}</a>
+                <p>(added by {{ book.user.fname }} {{ book.user.lname }})</p>
+
+                {% if user not in book.Favorite_by.all %}
+                <p><a href="addFavorite/{{ book.id }}">Add to Favorite</a></p>
+                {% else %}
+                <p>this is one of your Favorites
+                    <!-- <a href="/unFavorite/{{book.id}}">un-Favorite</a>-->
+                </p>
+                {% endif %}
+
+
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

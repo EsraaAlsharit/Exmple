@@ -36,6 +36,7 @@ def register(request):
                 fname=request.POST['fname'],
                 lname=request.POST['lname'],
                 email=request.POST['email'],
+                birthday =request.POST['birthday'],
                 password=hash
             )
             show.save()

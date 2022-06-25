@@ -41,11 +41,11 @@ Filter, on the other hand, returns a list, so if there is no user that matches, 
 
 - [x] Don't allow a user who is not logged in to reach the /success route (i.e. by making a GET request in the address bar)
 
-- [ ] NINJA BONUS: Add a birthday field and validate that the user's birthday is in the past
+- [x] NINJA BONUS: Add a birthday field and validate that the user's birthday is in the past
 
-- [ ] NINJA BONUS: Validate that the email provided for registration is unique
+- [x] NINJA BONUS: Validate that the email provided for registration is unique
 
-- [ ] SENSEI BONUS: Add a birthday field and validate that the user is at least 13 years old (COPPA compliant!)
+- [x] SENSEI BONUS: Add a birthday field and validate that the user is at least 13 years old (COPPA compliant!)
 
 - [ ] SENSEI BONUS: Validate the email uniqueness with AJAX
 

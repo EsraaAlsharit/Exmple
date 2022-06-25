@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from Semi_Restful_App.models import Show
+from datetime import date
+from datetime import datetime
 
 
 def index(request):
@@ -28,6 +30,8 @@ def AddShow(request):
             releaseDate=request.POST['release_date'],
             desc=request.POST['desc']
         )
+        print(request.POST['release_date'])
+        print(type(request.POST['release_date']))
         show.save()
         messages.success(request, "Show successfully Add")
         return redirect("../shows/{}".format(show.id))
@@ -35,11 +39,12 @@ def AddShow(request):
 
 def EditShowTem(request, ID):
     show = Show.objects.get(id=ID)
-    date = show.releaseDate.strftime("%m-%d-%Y")
-    print(date)
+    
+    dateshow = show.releaseDate.strftime("%Y-%m-%d")
+    print( date.today())
     context = {
         'show': show,
-        'date': date
+        'date': dateshow
     }
     return render(request, 'edit_show.html', context)
 

@@ -73,17 +73,21 @@
         <hr>
         <div class="text-center">
             <h1>All the Dojos</h1>
-            {%for Ninja in Ninjas%}
+            {%for Dojo in Dojos%}
             <ul class="list-unstyled">
                 <li>
-                    <h6>Ninjas at the {{Ninja.dojo.name}}</h6>
+                    <h6>Ninjas at the {{Dojo.name}} <a href="/delDojo/{{Dojo.id}}">delete</a></h6>
+                    {%for Ninja in Ninjas%}
+
+                    {% if Ninja in Dojo.dojos.all %}
                     <ul class="list-unstyled">
                         <li>{{ Ninja.fname }} {{ Ninja.lname }}</li>
                     </ul>
+                    {%endif%}
+
+                    {%endfor%}
                 </li>
             </ul>
-
-
             {%endfor%}
             <p></p>
 

@@ -16,6 +16,6 @@ Using the same project from the previous assignment, add a template and the nece
 
 - [x] Add a route to process the creation of a new ninja; the dropdown on the form should be a list of all existing dojos
 
-- [ ] NINJA BONUS: Add a delete button next to each dojo name that deletes that dojo (and all associated ninjas) from the database
+- [x] NINJA BONUS: Add a delete button next to each dojo name that deletes that dojo (and all associated ninjas) from the database
 
 - [ ] SENSEI BONUS: Add a count of ninjas next to each dojo name (eg. Ninjas at the Painting Dojo - 2; Ninjas at the Architecture Dojo - 0)

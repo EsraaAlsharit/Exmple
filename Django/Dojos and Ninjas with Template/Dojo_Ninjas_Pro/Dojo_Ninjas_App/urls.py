@@ -4,4 +4,5 @@ urlpatterns = [
     path('', views.index),
     path('AddNinja', views.AddNinja),
     path('AddDojo', views.AddDojo),
+    path('delDojo/<ID>', views.DelDojo)
 ]

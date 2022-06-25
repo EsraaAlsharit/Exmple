@@ -1,4 +1,5 @@
 # Assignment: Courses
+
 ### Objectives:
 
 - More practice with full-stack creating, reading, and deleting from a database
@@ -11,7 +12,7 @@ Make a new Django project and application, and complete the functionality of the
 
 1. Make `description` a one-to-one relationship with the Course table rather than a column in the `course` table (intermediate).
 2. Add an action _comment_ to each course that takes you to a page where you can add comments about that course and view all comments that have been entered (advanced)
-Courses
+   Courses
 
 ![](mvc-courses.png)
 
@@ -29,8 +30,8 @@ Courses
 
 - [x] If the user selects "No," redirect to the root route. If the user selects "Yes," delete the course and redirect to the root route
 
-- [ ] NINJA BONUS: Make the description a separate class and have the description field of the Course class be a one-to-one relationship with Description
+- [x] NINJA BONUS: Make the description a separate class and have the description field of the Course class be a one-to-one relationship with Description
 
-- [ ] NINJA BONUS: For each course, have a link to comment that renders a page with a form to make comments and a list of all comments for that course
+- [x] NINJA BONUS: For each course, have a link to comment that renders a page with a form to make comments and a list of all comments for that course
 
 - [ ] SENSEI BONUS: Use AJAX for the remove functionality, prompting with a modal and processing the remove accordingly (No--close the modal without deleting, Yes--close the modal and delete the entry)

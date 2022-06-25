@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Courses</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Course</h1>
+            <p><strong>Name: </strong> {{ course.name }}</p>
+            <p><strong>Description: </strong>{{ course.des.desc }}</p>
+            <ul>
+                {% for comm in course.comm.all %}
+                <li>{{ comm.comm }}</li>
+                {%endfor%}
+            </ul>
+            <p></p>
+
+        </div>
+
+        <div>
+            <h1>Add a new Comment</h1>
+            <form action="/AddComment" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="hidden" name="id" value="{{ course.id }}">
+                    <label for="comm">Comment:</label>
+                    <textarea class="form-control" name="comm"></textarea>
+                </div>
+                <div class="form-group my-3">
+                    <input type="submit" value="Add" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -11,6 +11,30 @@ def index(request):
     return render(request, "index.html", context)
 
 
+def comment(request, ID):
+    course = Course.objects.get(id=ID)
+    context = {
+        "course": course
+    }
+    return render(request, "comment.html", context)
+
+
+def addComment(request):
+    errors = Comment.objects.validator(request.POST)
+    ID = request.POST["id"]
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect(f"comment/{ID}")
+    else:
+        course = Course.objects.get(id=ID)
+        comment = Comment.objects.create(comm=request.POST['comm'])
+        comment.save()
+        course.comm.add(comment)
+        messages.success(request, "Course successfully Add")
+        return redirect(f"comment/{ID}")
+
+
 def AddCourse(request):
     errors = Course.objects.basic_validator(request.POST)
     if len(errors) > 0:
@@ -18,12 +42,13 @@ def AddCourse(request):
             messages.error(request, value)
         return redirect("/")
     else:
+        decse = Desc.objects.create(desc=request.POST['desc'])
         course = Course.objects.create(
             name=request.POST['name'],
-            desc=request.POST['desc']
+            des=decse
         )
         course.save()
-        messages.success(request, "Show successfully Add")
+        messages.success(request, "Course successfully Add")
         return redirect("/")
 
 

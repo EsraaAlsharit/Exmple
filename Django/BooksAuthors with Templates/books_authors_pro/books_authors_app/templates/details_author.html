@@ -28,10 +28,13 @@
                             {% csrf_token %}
                             <input type="hidden" name="AID" value="{{ authors.id }}">
                             <select name="BID" id="">
+                                <option value="">select</option>
                                 {% for book in books %}
+                                {% if not book in authors.books.all %}
                                 <option value="{{ book.id }}">
                                     {{ book.title }}
                                 </option>
+                                {%endif%}
                                 {% endfor %}
                             </select>
                             <input type="submit" value="Add">

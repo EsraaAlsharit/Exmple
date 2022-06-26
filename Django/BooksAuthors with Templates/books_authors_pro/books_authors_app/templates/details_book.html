@@ -20,21 +20,26 @@
             </li>
             <li>Author:
                 <ul>
-                    {% for i in book.books.all %}
+                    {% for i in book.author.all %}
                     <li>{{ i.fname }}</li>
                     {% endfor %}
                     <li class="list-unstyled">
                         <form action="../addAuthorTo" method="post">
                             {% csrf_token %}
                             <input type="hidden" name="BID" value="{{ book.id }}">
-                            <select name="AID" id="">
+                            <select name="AID" id="" class="">
+                                <option value="">select</option>
                                 {% for author in authors %}
+                                <!-- <option>{{ author.books }}</option> -->
+                                {% if not author in book.author.all %}
                                 <option value="{{ author.id }}">
                                     {{ author.fname }} {{ author.lname }}
                                 </option>
+                                {%endif%}
+
                                 {% endfor %}
                             </select>
-                            <input type="submit" value="Add">
+                            <input type="submit" value="Add" class="btn btn-primary">
                         </form>
                     </li>
                 </ul>

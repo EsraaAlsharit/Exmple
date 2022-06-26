@@ -50,6 +50,7 @@ const num3 = -1
 
 function recursiveSigma(n) {
     // code here
+    n=Math.floor(n)
     if (n <= 0) {
         return 0
     }

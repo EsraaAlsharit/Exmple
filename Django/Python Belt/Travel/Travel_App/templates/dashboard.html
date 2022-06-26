@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Dashboard page</title>
+
+</head>
+
+<body>
+    <div class="container my-5">
+
+        <div class="head d-flex justify-content-between">
+            <h1>Hello {{ user.fname }}</h1>
+            <div class="action ">
+                <a href="/logout">Logout</a>
+                <a href="/addTrip" class="btn btn-primary mx-5">Create a new trip!</a>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                <p {% if message.tags %} class="{{ message.tags }} text-success" {% endif %}>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <div class="trips">
+            <div class="user-trip">
+                <p>You trips:</p>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Destination</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Plan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for trip in trips%}
+                        {% if trip in user.trip_list.all %}
+                        <tr>
+                            <td><a href="details/{{trip.id}}">{{ trip.dest }}</a></td>
+                            <td>{{ trip.Sdate }}</td>
+                            <td>{{ trip.Edate }}</td>
+                            <td>{{ trip.plan }}</td>
+                            <td>
+                                {% if trip.user == user%}
+                                <a href="/remove/{{ trip.id }}">Remove</a> | <a href="/edit/{{ trip.id }}">Edit</a>|
+                                {%endif%}
+                                <a href="/cancel/{{ trip.id }}">Cancel</a>
+
+                            </td>
+                        </tr>
+                        {% elif trip in user.trip.all %}
+                        <tr>
+                            <td><a href="details/{{trip.id}}">{{ trip.dest }}</a></td>
+                            <td>{{ trip.Sdate }}</td>
+                            <td>{{ trip.Edate }}</td>
+                            <td>{{ trip.plan }}</td>
+                            <td>
+                                <a href="/remove/{{ trip.id }}">Remove</a> | <a href="/edit/{{ trip.id }}">Edit</a>|
+                            </td>
+                        </tr>
+                        {%endif%}
+
+
+
+                        {%endfor%}
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="other-trips my-5">
+                <p class="text-info">Other people's trips:</p>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Destination</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Plan</th>
+                            <th>want to join?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for trip in trips%}
+                        <!-- user not in book.Favorite_by.all -->
+                        {% if trip not in user.trip_list.all %}
+                        <tr>
+                            <td><a href="details/{{trip.id}}">{{ trip.dest }}</a></td>
+                            <td>{{ trip.Sdate }}</td>
+                            <td>{{ trip.Edate }}</td>
+                            <td>{{ trip.plan }}</td>
+                            <td>
+                                <a href="/join/{{trip.id}}">Join</a>
+                            </td>
+                        </tr>
+                        {%endif%}
+                        {%endfor%}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

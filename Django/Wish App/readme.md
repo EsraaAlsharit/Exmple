@@ -1,22 +1,5 @@
-25 Jun 2022 PDT
- Exam file was successfully uploaded.
-Zip your exam files and upload it here
-esraa.zip
- 
-Maximum file size you can upload is 10 MB
-
- 
-Provide us your exam video demo
-Add your video URL
- 
-You can still provide the url even after the given time limit
-
 Option A (Wish App)
 Make an application where users may post their wishes and keep track of when their wishes come true!
-
-
-
-
 
 
 For a red belt:

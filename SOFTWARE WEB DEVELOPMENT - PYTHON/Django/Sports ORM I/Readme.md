@@ -4,7 +4,7 @@
 <hr>
 Using the sports_orm, complete all the following queries and show their results on index.html.
 
-The purpose of this assignment is to practice using the Django ORM to make queries on a pre-existing database. You MUST install the sports_orm before you can complete this assignment. In your Django folder, run this terminal command:`` https://github.com/TheCodingDojo/sports_orm.git` This will create a folder named `sports_orm`; if you `cd` into this new folder, `python mangage.py migrate` and `python manage.py runserver`, you should see lists of sports leagues, teams, and players. Your goal for this assignment is to modify `leagues/views.py` and/or `leagues/templates/leagues/index.html` so that instead the page shows:
+The purpose of this assignment is to practice using the Django ORM to make queries on a pre-existing database. You MUST install the sports_orm before you can complete this assignment. In your Django folder, run this terminal command:`https://github.com/TheCodingDojo/sports_orm.git` This will create a folder named `sports_orm`; if you `cd` into this new folder, `python mangage.py migrate` and `python manage.py runserver`, you should see lists of sports leagues, teams, and players. Your goal for this assignment is to modify `leagues/views.py` and/or `leagues/templates/leagues/index.html` so that instead the page shows:
 
 1...all baseball leagues
 2...all womens' leagues

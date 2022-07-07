@@ -17,9 +17,9 @@ django_intro> django-admin startproject your_project_name_here
 
 ````
 
-    - Let's test this out:
+- Let's test this out:
 
-    Navigate into the folder that was just created. A new Django project has just been created--let's run it!
+Navigate into the folder that was just created. A new Django project has just been created--let's run it!
 
 ```md
 
@@ -28,22 +28,24 @@ your_project_name_here> python manage.py runserver
 
 ```
 
-    Open `localhost:8000` in a browser window. Hooray for CLIs (command-line interfaces)!
+Open `localhost:8000` in a browser window. Hooray for CLIs (command-line interfaces)!
 
-    (Don't worry about the warning about unapplied migrations. It won't affect us for now, and we'll address it soon enough.)
+(Don't worry about the warning about unapplied migrations. It won't affect us for now, and we'll address it soon enough.)
 
-    Press `ctrl-c` to stop the server. Open up the project folder in your text editor. (Take note of the folder structure so far!) We'll be updating some of these files shortly.
+Press `ctrl-c` to stop the server. Open up the project folder in your text editor. (Take note of the folder structure so far!) We'll be updating some of these files shortly.
 
 2. For every app we want to add to our project, we'll do the following:
 
 ```md
 your_project_name_here> python manage.py startapp your_app_name_here
 ````
-The apps in a project CANNOT have the same name as the project.
+**The apps in a project CANNOT have the same name as the project.**
 
 In the text editor, find the settings.py file. It should be in a folder with the same name as our project. Find the variable INSTALLED_APPS, and let's add our newly created app:
 
-your_project_name_here/your_project_name_here/settings.py
+### your_project_name_here/your_project_name_here/settings.py
+
+```md
    INSTALLED_APPS = [
        'your_app_name_here', # added this line. Don't forget the comma!!
        'django.contrib.admin',
@@ -52,17 +54,25 @@ your_project_name_here/your_project_name_here/settings.py
        'django.contrib.sessions',
        'django.contrib.messages',
        'django.contrib.staticfiles',
-   ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Pythoncopy
-For these next few steps, we are creating the route "/" to be associated with a specific function. Trust for now--we'll break this down in greater detail in the next tab. In the urls.py file, add a URL pattern for your new app. (You can delete the current admin pattern, or just ignore it for now). You will need to add an import for your views file.
+   ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
+````
 
-your_project_name_here/your_project_name_here/urls.py
+3. For these next few steps, we are creating the route "/" to be associated with a specific function. Trust for now--we'll break this down in greater detail in the next tab. In the urls.py file, add a URL pattern for your new app. (You can delete the current admin pattern, or just ignore it for now). You will need to add an import for your views file.
+
+### your_project_name_here/your_project_name_here/urls.py
+
+```md
 from django.urls import path, include           # import include
 # from django.contrib import admin              # comment out, or just delete
 urlpatterns = [
     path('', include('your_app_name_here.urls')),	   
     # path('admin/', admin.sites.urls)         # comment out, or just delete
-]copy
-Next, let's create a new urls.py file in the your_app_name_here folder. Put the following code
+]
+````
+
+4. Next, let's create a new urls.py file in the your_app_name_here folder. Put the following code
+
+```md
 your_project_name_here/your_app_name_here/urls.py
 from django.urls import path     
 from . import views

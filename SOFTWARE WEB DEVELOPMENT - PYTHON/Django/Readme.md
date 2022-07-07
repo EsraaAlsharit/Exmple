@@ -1,5 +1,7 @@
 # Creating a Django Project
+
 ### Objectives:
+
 - Practice the steps for creating a Django project with a single app
 - Familiarize ourselves with the role of each file
 <hr>
@@ -11,21 +13,17 @@ Remember that a single application in Django (in our case, every assignment) is 
 1. With our Django virtual environment activated, create a new Django project. First navigate to where you want the project to be saved (for these first few assignments, that will be the python_stack/django/django_intro folder). Then run this command, specifying a project name of our choosing:
 
 ```md
-
 cd python_stack/django/django_intro
 django_intro> django-admin startproject your_project_name_here
-
-````
+```
 
 - Let's test this out:
 
 Navigate into the folder that was just created. A new Django project has just been created--let's run it!
 
 ```md
-
 django_intro> cd your_project_name_here
 your_project_name_here> python manage.py runserver
-
 ```
 
 Open `localhost:8000` in a browser window. Hooray for CLIs (command-line interfaces)!
@@ -38,7 +36,8 @@ Press `ctrl-c` to stop the server. Open up the project folder in your text edito
 
 ```md
 your_project_name_here> python manage.py startapp your_app_name_here
-````
+```
+
 **The apps in a project CANNOT have the same name as the project.**
 
 In the text editor, find the settings.py file. It should be in a folder with the same name as our project. Find the variable INSTALLED_APPS, and let's add our newly created app:
@@ -46,52 +45,61 @@ In the text editor, find the settings.py file. It should be in a folder with the
 ### your_project_name_here/your_project_name_here/settings.py
 
 ```md
-   INSTALLED_APPS = [
-       'your_app_name_here', # added this line. Don't forget the comma!!
-       'django.contrib.admin',
-       'django.contrib.auth',
-       'django.contrib.contenttypes',
-       'django.contrib.sessions',
-       'django.contrib.messages',
-       'django.contrib.staticfiles',
-   ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
-````
+INSTALLED_APPS = [
+'your_app_name_here', # added this line. Don't forget the comma!!
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+] # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
+```
 
 3. For these next few steps, we are creating the route "/" to be associated with a specific function. Trust for now--we'll break this down in greater detail in the next tab. In the urls.py file, add a URL pattern for your new app. (You can delete the current admin pattern, or just ignore it for now). You will need to add an import for your views file.
 
 ### your_project_name_here/your_project_name_here/urls.py
 
 ```md
-from django.urls import path, include           # import include
-# from django.contrib import admin              # comment out, or just delete
+from django.urls import path, include # import include
+
+# from django.contrib import admin # comment out, or just delete
+
 urlpatterns = [
-    path('', include('your_app_name_here.urls')),	   
-    # path('admin/', admin.sites.urls)         # comment out, or just delete
+path('', include('your_app_name_here.urls')),
+ # path('admin/', admin.sites.urls) # comment out, or just delete
 ]
-````
+```
 
 4. Next, let's create a new urls.py file in the your_app_name_here folder. Put the following code
 
 ```md
 your_project_name_here/your_app_name_here/urls.py
-from django.urls import path     
+from django.urls import path  
 from . import views
 urlpatterns = [
-    path('', views.index),	   
+path('', views.index),
 ]
-````
+```
+
 And then actually put a function called index in our app's views.py file:
 
-your_project_name_here/your_app_name_here/views.py
+### your_project_name_here/your_app_name_here/views.py
+
+```md
 from django.shortcuts import render, HttpResponse
 def index(request):
-    return HttpResponse("this is the equivalent of @app.route('/')!")copy
-Let's run our app again and check it out at localhost:8000/. Whew. We've done it!
+return HttpResponse("this is the equivalent of @app.route('/')!")
+```
 
+Let's run our app again and check it out at `localhost:8000/`. Whew. We've done it!
+
+```md
 your_project_name_here> python manage.py runservercopy
+```
 
-
-Note: Do not manually change the name of any of your folders after creation!
+**Note: Do not manually change the name of any of your folders after creation!**
 
 For a quick summary/visual overview, here's the structure we should have after all these steps, inside the project folder.
 
+![](project-structure.png)

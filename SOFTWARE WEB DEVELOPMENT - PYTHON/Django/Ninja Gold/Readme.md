@@ -22,7 +22,7 @@ As a reminder, you're going to create a mini-game that helps a ninja make some m
 
 - [x] Have the root route render the main Ninja Gold page
 
-- [ ] Have the "/process_money" POST route increase/decrease the user's gold by an appropriate amount and redirect to the root route
+- [x] Have the "/process_money" POST route increase/decrease the user's gold by an appropriate amount and redirect to the root route
 
 - [ ] NINJA BONUS: Refactor your code so the location is being passed in the URL rather than via a form
 

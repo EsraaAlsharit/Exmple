@@ -22,7 +22,7 @@ django_intro> django-admin startproject your_project_name_here
 ```md
 django_intro> cd your_project_name_here
 your_project_name_here> python manage.py runserver
-````
+```
 
     Open `localhost:8000` in a browser window. Hooray for CLIs (command-line interfaces)!
 
@@ -61,7 +61,8 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('', views.index),	   
-]copy
+]
+````
 And then actually put a function called index in our app's views.py file:
 
 your_project_name_here/your_app_name_here/views.py

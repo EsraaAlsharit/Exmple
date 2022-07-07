@@ -130,3 +130,9 @@ For a quick summary/visual overview, here's the structure we should have after a
   python manage.py makemigrations
   python manage.py migrate
 ````
+
+To use the shell, we'll run the following command in our terminal from our project's root directory (where our manage.py file is located):
+
+```md
+python manage.py shell
+````

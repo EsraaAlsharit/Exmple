@@ -5,7 +5,7 @@ function myFunction() {
 
     for (let i = 0; i < cards.length; i++) {
         if (cards[i].checked) {
-            alert(cards[i].value);
+            // alert(cards[i].value);
             card = cards[i].value;
             break;
         }
@@ -39,8 +39,13 @@ function myFunction() {
         let imgURL = canvas.toDataURL();
         newImage.src = imgURL;
 
-        let container = document.getElementById("img");
+        let container = document.getElementById("control");
+        // let A = document.createElement('a');
+        // A.setAttribute('href', newImage.src);
+        // A.setAttribute('download', "");
+        // container.appendChild(A);
         container.parentNode.insertBefore(newImage, container.nextSibling);
+
     }
     imgFinal.src = `${card}.png`;
 

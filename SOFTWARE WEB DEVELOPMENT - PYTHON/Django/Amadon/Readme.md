@@ -53,28 +53,28 @@ In other words, have the form look more like below:
 
 Surprisingly, a lot of e-commerce sites are built where you could easily change the price. What if you built a web crawler/scraper to go through lots of e-commerce sites to specifically look for sites where price is part of the shopping cart form? You could reach out to them and tell them about the security flaw in their site. Maybe they'll hire you to make their site more secure? :)
 
-Now it's your turn to go through this exercise and experience these issues for yourself. Follow the steps below to first experience these issues yourself, and then fix them. Follow the checklist below using this GitHub repository to get started. These same instructions are also provided in the GitHub repository's README file. In this code, we're not worrying about individual users, so we'll assume that all orders are being submitted by one user in order to calculate totals.
+Now it's your turn to go through this exercise and experience these issues for yourself. Follow the steps below to first experience these issues yourself, and then fix them. Follow the checklist below using this [GitHub repository](https://github.com/TheCodingDojo/amadon) to get started. These same instructions are also provided in the GitHub repository's README file. In this code, we're not worrying about individual users, so we'll assume that all orders are being submitted by one user in order to calculate totals.
 
-Clone the repository and peruse the code
+- [x] Clone the repository and peruse the code
 
-Run makemigrations and migrate to create the necessary database tables
+- [x] Run makemigrations and migrate to create the necessary database tables
 
-Seed the database with a few products (i.e. go into the shell and create 3-4 products)
+- [x] Seed the database with a few products (i.e. go into the shell and create 3-4 products)
 
-Run the server and make a purchase
+- [x] Run the server and make a purchase
 
-Add some basic styling (use Bootstrap or another CSS framework)
+- [x] Add some basic styling (use Bootstrap or another CSS framework)
 
-On the checkout page, calculate and display the total charge for the most recent order
+- [x] On the checkout page, calculate and display the total charge for the most recent order
 
-On the checkout page, calculate and display the total quantity of all orders combined
+- [x] On the checkout page, calculate and display the total quantity of all orders combined
 
-On the checkout page, calculate and display the total amount charged for all orders combined
+- [x] On the checkout page, calculate and display the total amount charged for all orders combined
 
-After making an order, hit the refresh button while on the checkout page and say yes/confirm. What do you notice?
+- [x] After making an order, hit the refresh button while on the checkout page and say yes/confirm. What do you notice?
 
-Fix this issue so that users don't inadvertently make another order by mistake
+- [x] Fix this issue so that users don't inadvertently make another order by mistake
 
-Go back to the order form and use your browser's inspect element tool. Change the price of an item and then place an order. What do you notice?
+- [x] Go back to the order form and use your browser's inspect element tool. Change the price of an item and then place an order. What do you notice?
 
-Fix this issue so that users don't get to set the price of their items!
+- [x] Fix this issue so that users don't get to set the price of their items!

@@ -7,7 +7,7 @@ Objectives:
 - Create, build (compile) and run a project
 - Encounter some common syntax errors, and be able to debug them
 
-For this assignment we'll be building some of the underlying logic for an ordering app for a cafe, Cafe Java. Below is some starter code to include in your CafeJava.java file.
+For this assignment we'll be building some of the underlying logic for an ordering app for a cafe, Cafe Java. Below is some starter code to include in your `CafeJava.java` file.
 
 ```md
 public class CafeJava {

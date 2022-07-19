@@ -4,23 +4,18 @@ import java.util.ArrayList;
 public class Order {
 
     // MEMBER VARIABLES
-    private String name = "Guest"; // default value of null
+    private String name; // default value of null
     private boolean ready; // default value false
-    private ArrayList<Item> items; // defaults to null
+    private ArrayList<Item> items = new ArrayList<>(); // defaults to null
 
     // CONSTRUCTOR
     // No arguments, sets name to "Guest", initializes items as an empty list.
     public Order() {
+        this.name = "Guest";
     }
 
-    public Order(boolean ready, ArrayList<Item> items) {
-        this.ready = ready;
-        this.items = items;
-    }
-    public Order(boolean ready, ArrayList<Item> items, String name) {
+    public Order(String name) {
         this.name = name;
-        this.ready = ready;
-        this.items = items;
     }
 
     // OVERLOADED CONSTRUCTOR
@@ -28,6 +23,37 @@ public class Order {
     // Initializes items as an empty list.
 
     // ORDER METHODS
+    public void addItem(Item its) {
+        this.items.add(its);
+    }
+
+    public void getStatusMessage() {
+        if (this.ready) {
+            // return "Your order is ready.";
+            System.out.println("Your order is ready.");
+        } else {
+            // return "Thank you for waiting. Your order will be ready soon.";
+            System.out.println("Thank you for waiting. Your order will be ready soon.");
+        }
+
+    }
+
+    public double getOrderTotal() {
+        double total = 0.0;
+        for (Item i : this.items) {
+            total += i.getPrice();
+        }
+        return total;
+    }
+
+    public void display() {
+        System.out.printf("Customer Name: %s", this.name);
+        System.out.println();
+        for (Item i : this.items) {
+            System.out.println(i.getName() + " - $" + i.getPrice());
+        }
+        System.out.println("Total: $" + this.getOrderTotal());
+    }
 
     // Most of your code will go here,
     // so implement the getters and setters first!

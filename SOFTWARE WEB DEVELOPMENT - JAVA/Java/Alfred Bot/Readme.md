@@ -142,7 +142,9 @@ As you go through this bootcamp, it's a good idea to use comments liberally. Not
 ### Useful Links
 
 [java.util](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html)
+
 [Java String documentation](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html)
+
 [Javadoc](https://www.baeldung.com/javadoc)
 
 - [x] Create a project folder in your Java stack folder called "alfredBot"

@@ -3,7 +3,13 @@ package mycode;
 public class Mammal {
     public int energyLevel;
 
-    public void displayEnergy(){
-
+    public int displayEnergy(){
+        return this.energyLevel;
     }
+
+    public Mammal() {
+        this.energyLevel = 100;
+    }
+
+    
 }

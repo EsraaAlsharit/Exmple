@@ -1,4 +1,4 @@
-package mycode;
+package sol;
 
 public class Item {
     public String name;

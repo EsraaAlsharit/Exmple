@@ -1,4 +1,4 @@
-package mycode;
+package sol;
 
 import java.util.ArrayList;
 

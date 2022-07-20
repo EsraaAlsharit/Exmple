@@ -22,15 +22,15 @@ We are going to create a BankAccount class. This class will recreate some of the
 
 - [x] Create a getter method for the user's saving account balance.
 
-- [ ] Create a method that will allow a user to deposit money into either the checking or saving, be sure to add to total amount stored.
+- [x] Create a method that will allow a user to deposit money into either the checking or saving, be sure to add to total amount stored.
 
-- [ ] Create a method to withdraw money from one balance. Do not allow them to withdraw money if there are insufficient funds.
+- [x] Create a method to withdraw money from one balance. Do not allow them to withdraw money if there are insufficient funds.
 
-- [ ] Create a method to see the total money from the checking and saving.
+- [x] Create a method to see the total money from the checking and saving.
 
-- [ ] Users should not be able to set any of the attributes from the class.
+- [x] Users should not be able to set any of the attributes from the class.
 
-- [ ] NINJA BONUS: Add the the following class attribute: account number. The type is up to you, can be a String or a Long or another type.
+- [x] NINJA BONUS: Add the the following class attribute: account number. The type is up to you, can be a String or a Long or another type.
 
 - [ ] NINJA BONUS: Create a private method that returns a random ten digit account number.
 

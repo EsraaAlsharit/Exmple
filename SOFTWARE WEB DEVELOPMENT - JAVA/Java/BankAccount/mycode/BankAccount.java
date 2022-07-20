@@ -1,13 +1,19 @@
 package mycode;
 
+import java.util.Random;
+
 public class BankAccount {
     private double checkingbalance;
     private double savingsbalance;
     private static int numberAccounts = 0;
     private static int totalAmount;
 
+    private String accountNumber;
+    
+
     public BankAccount() {
         numberAccounts++;
+        GanerteAccount();
     }
 
     public static int getNumberAccounts() {
@@ -53,21 +59,31 @@ public class BankAccount {
     }
 
     public void withdrawSavingsbalance(int amount, double account) {
-        if (account > amount) {
+        if (account >= amount) {
             this.setSavingsbalance(account -= amount);
             totalAmount -= amount;
+        } else {
+            System.out.println("Error Process");
         }
     }
 
     public void withdrawCheckingbalance(int amount, double account) {
-        if (account > amount) {
+        if (account >= amount) {
             this.setCheckingbalance(account -= amount);
             totalAmount -= amount;
+        } else {
+            System.out.println("Error Process");
         }
     }
 
     public void total() {
         System.out.println(this.getCheckingbalance() + this.getSavingsbalance());
+    }
+
+    private void GanerteAccount() {
+        Random random = new Random();
+        System.out.print(random.nextInt(100));
+
     }
 
 }

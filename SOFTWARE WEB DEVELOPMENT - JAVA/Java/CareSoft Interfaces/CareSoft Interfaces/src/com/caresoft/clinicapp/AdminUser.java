@@ -55,7 +55,7 @@ public class AdminUser extends User implements HIPAACompliantAdmin, HIPAAComplia
 	public boolean accessAuthorized(Integer confirmedAuthID) {
 		// TODO Auto-generated method stub
 		if (confirmedAuthID==this.id) {
-			newIncident("welcome");
+			// newIncident("welcome");
 			return true;
 		}else {
 			authIncident();

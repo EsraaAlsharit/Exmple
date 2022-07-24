@@ -41,6 +41,7 @@ Specifically, in this case, when dealing with the view model, that is, the Model
 Item Controller
 Next, in your controllers package, create your controller as per usual. We'll start you off with some code, and you can take it from there.
 
+```md
 // ... imports (Use shift+ctrl+O or shift+cmd+O to import as you code)
 @Controller
 public class ItemController {
@@ -59,7 +60,7 @@ public class ItemController {
         return "index.jsp";
     }
 }
-copy
+````
 Now, using the new-fangled c:forEach JSTL syntax you learned, and your expertise with OOP, recreate the wireframe above to display a list of fruits and their prices. 
 
 Note: it is NOT required to style it exactly as the wireframe, but do add some of your own styling to flex those css muscles.

@@ -12,7 +12,7 @@
 	<h1>Customer Name: <c:out value="${name}"/></h1>
 	<h3>Item name: <c:out value="${item}"/></h3>
 	<h3>Price: <c:out value="${price}"/></h3>
-	<h3>Description: <c:out value="${des}"/></h3>
+	<h3>Description: <c:out value="${dec}"/></h3>
 	<h3>Vendor: <c:out value="${ven}"/></h3>
     
 </body>

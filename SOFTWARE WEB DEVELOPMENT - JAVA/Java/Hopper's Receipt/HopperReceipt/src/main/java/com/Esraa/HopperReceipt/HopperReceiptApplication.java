@@ -18,7 +18,7 @@ public class HopperReceiptApplication {
     @RequestMapping("/")
     public String index(Model model) {
         
-        String name = "Grace Hopper";
+        String name = "Esraa Alsharit";
         String itemName = "Copper wire";
         double price = 5.25;
         String description = "Metal strips, also an illustration of nanoseconds.";

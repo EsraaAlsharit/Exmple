@@ -7,6 +7,7 @@ Become more comfortable with routing.
 Practice reading documentation & research skills to implement time formatting.
 Add CSS and JavaScript to your project.
 
+![](05_18_displaydate.png)
 
 - [x] Use new java.util.Date() in your controller to get the date.
 

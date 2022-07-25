@@ -11,9 +11,9 @@ Add CSS and JavaScript to your project.
 
 - [x] Use new java.util.Date() in your controller to get the date.
 
-- [ ] Create an app that will render three pages.
+- [x] Create an app that will render three pages.
 
-- [ ] Render one home page as the dashboard with links to the two others.
+- [x] Render one home page as the dashboard with links to the two others.
 
 - [ ] Render one page at /date with the current date formatted as Saturday, the 22 of January, 2028
 

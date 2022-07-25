@@ -13,19 +13,19 @@
       <!-- For any Bootstrap that uses JS or jQuery-->
       <script src="/webjars/jquery/jquery.min.js"></script>
       <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-      
+
 
 
 
       <title>Insert title here</title>
     </head>
 
-    <body class="container">
+    <body class="container h-50 my-5 py-5">
 
-      <div class="d-flex justify-content-between mx-5">
-        <a href="/date">Date Template</a>
-
-        <a href="/time">Time Template</a>
+      <div class="d-flex justify-content-center mx-5">
+        <h1>
+          <c:out value="${time}" />
+        </h1>
       </div>
 
     </body>

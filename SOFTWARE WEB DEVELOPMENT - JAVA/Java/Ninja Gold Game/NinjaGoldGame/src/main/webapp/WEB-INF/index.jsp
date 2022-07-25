@@ -22,7 +22,7 @@
             <input type="number" name="num" disabled value="<c:out value='${num}'/>">
         </div>
         <div class="d-flex justify-content-between">
-            <form action="/Farm" method="post">
+            <form action="/Add" method="post">
                 
                 <div class="form-group card p-2 text-center m-3 m-3">
                     <h3>Farm</h3>
@@ -31,7 +31,7 @@
                     <input type="submit" value="Find Gold!">
                 </div>
             </form>
-            <form action="/Cave" method="post">
+            <form action="/Add" method="post">
                 
                 <div class="form-group card p-2 text-center m-3 m-3">
                     <h3>Cave</h3>
@@ -40,7 +40,7 @@
                     <input type="submit" value="Find Gold!">
                 </div>
             </form>
-            <form action="/House" method="post">
+            <form action="/Add" method="post">
                 
                 <div class="form-group card p-2 text-center m-3 m-3">
                     <h3>House</h3>
@@ -49,12 +49,12 @@
                     <input type="submit" value="Find Gold!">
                 </div>
             </form>
-            <form action="/Casion" method="post">
+            <form action="/Add" method="post">
                 
                 <div class="form-group card p-2 text-center m-3 m-3">
                     <h3>Casion!</h3>
                     <p>(earns/takes 0-50 gold)</p>
-                    <input type="hidden" name="form" value="quest">
+                    <input type="hidden" name="form" value="casion">
                     <input type="submit" value="Find Gold!">
                 </div>
             </form>
@@ -63,10 +63,11 @@
         <div class="form-group">
             <label for="">Activities</label><br>
             <div name="log" class="card">
-                {% for i in  request.session.log %}
-                <p class="m-0">
-                    {{ i }}</p>
-                {%endfor%}
+                <c:forEach var="log" items="${logs}">
+                <p class="m-0 <c:out value='${log.color}' />" >
+					<c:out value="${log.mass}" />                    
+				</p>
+                </c:forEach>
             </div>
         </div>
 

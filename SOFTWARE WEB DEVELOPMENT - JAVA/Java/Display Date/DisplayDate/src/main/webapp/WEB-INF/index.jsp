@@ -6,6 +6,7 @@
 
     <head>
       <meta charset="UTF-8">
+      
       <!-- for Bootstrap CSS -->
       <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
       <!-- YOUR own local CSS -->
@@ -13,7 +14,7 @@
       <!-- For any Bootstrap that uses JS or jQuery-->
       <script src="/webjars/jquery/jquery.min.js"></script>
       <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-      
+
 
 
 
@@ -22,10 +23,10 @@
 
     <body class="container">
 
-      <div class="d-flex justify-content-between mx-5">
-        <a href="/date">Date Template</a>
+      <div class="d-flex justify-content-between my-5 py-5 h-50">
+        <a href="/date" onclick="myFunction()">Date Template</a>
 
-        <a href="/time">Time Template</a>
+        <a href="/time" onclick="myFunction()">Time Template</a>
       </div>
 
     </body>

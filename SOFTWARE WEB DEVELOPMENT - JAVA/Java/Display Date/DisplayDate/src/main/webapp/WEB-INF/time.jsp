@@ -15,6 +15,7 @@
       <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 
+      <script type="text/javascript" src="/js/app.js"></script>
 
 
       <title>Insert title here</title>
@@ -23,7 +24,7 @@
     <body class="container h-50 my-5 py-5">
 
       <div class="d-flex justify-content-center mx-5">
-        <h1>
+        <h1 class="text-success">
           <c:out value="${time}" />
         </h1>
       </div>

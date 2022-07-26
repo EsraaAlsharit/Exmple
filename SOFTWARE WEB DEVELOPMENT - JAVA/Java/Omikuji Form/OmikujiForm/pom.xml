@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>OmikujiForm</name>
-	<description>Omikuji Form</description>
+	<description>SQLPro</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -35,8 +35,7 @@
         <artifactId>jquery</artifactId>
         <version>3.6.0</version>
     </dependency>
-    
-    <dependency>
+<dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
@@ -44,7 +43,6 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
         </dependency>
-	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

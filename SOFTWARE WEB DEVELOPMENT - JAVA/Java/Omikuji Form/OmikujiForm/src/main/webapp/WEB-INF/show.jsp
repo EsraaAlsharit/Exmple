@@ -19,9 +19,11 @@
         <body>
             <div class="row my-5 py-5">
                 <div class="col px-5">
-                    Send an Omikuji!
-                    <div class="card p-5 bg-primary">
-                        <p>
+                <div class="text-center">
+                    <h1>Here's Your Omikuji</h1>
+                    
+                    <div class="card p-5 bg-primary my-3">
+                        <h2>
                             In
                             <c:out value="${year}" /> Years, you will live in
                             <c:out value="${city}" /> with
@@ -31,8 +33,12 @@
                             The next time you see a
                             <c:out value="${thing}" />, you will have good luck.
                             <c:out value="${something}" />
-                        </p>
+                        </h2>
                     </div>
+                    
+                    <a href="/omikuji" >Go Back</a>
+                    </div>
+                    
                 </div>
             </div>
 

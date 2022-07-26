@@ -6,14 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @SpringBootApplication
-
 public class OmikujiFormApplication {
 
 	public static void main(String[] args) {
@@ -21,28 +18,33 @@ public class OmikujiFormApplication {
 	}
 
 	@RequestMapping("/omikuji")
-	public String index() {
+	public String index() {	
 		return "index.jsp";
 	}
-
+	
 	@RequestMapping("/omikuji/show")
-	public String show() {
+	public String Show() {	
 		return "show.jsp";
 	}
-
-	// @RequestMapping(value = "/show", method = RequestMethod.POST)
-	// @PostMapping("/send")
-	// @RequestMapping("/send")
-	@RequestMapping(method = RequestMethod.POST)
-	public String send(@RequestParam(value = "year") int year, HttpSession session) {
-		// // Your code here! Add values to the view model to be rendered
-		// session.setAttribute("year", year);
-		// session.setAttribute("city", city);
-		// session.setAttribute("name", name);
-		// session.setAttribute("job", job);
-		// session.setAttribute("thing", thing);
-		// session.setAttribute("something", something);
-
+	
+	@RequestMapping("/send")
+	public String send(HttpSession session,@RequestParam(value = "year") String year,
+			@RequestParam(value = "city") String city,
+			@RequestParam(value = "name") String name,
+			@RequestParam(value = "job") String job,
+			@RequestParam(value = "thing") String thing,
+			@RequestParam(value = "something") String something) {
+		
+		 		session.setAttribute("year", year);
+				 session.setAttribute("city", city);
+				 session.setAttribute("name", name);
+				 session.setAttribute("job", job);
+				 session.setAttribute("thing", thing);
+				 session.setAttribute("something", something);
 		return "redirect:/omikuji/show";
 	}
+	
+	
+	
+
 }

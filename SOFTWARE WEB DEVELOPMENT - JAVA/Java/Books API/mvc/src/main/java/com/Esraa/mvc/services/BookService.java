@@ -34,14 +34,15 @@ private final BookRepository bookRepository;
  }
 public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
 	// TODO Auto-generated method stub
-	Optional<Book> optionalBook = bookRepository.findById(id);
-	if(optionalBook.isPresent()) {
-//		optionalBook.id=id;
-		return null;
-		
-    } else {
-        return null;
-    }
+	Book optionalBook = findBook(id);
+	
+		optionalBook.setTitle(title);
+		optionalBook.setDescription(desc);
+		optionalBook.setId(id);
+		optionalBook.setLanguage(lang);
+		optionalBook.setNumberOfPages(numOfPages);
+		//Optional<Book> optionalBook1 = bookRepository.findById(id);
+		return bookRepository.save(optionalBook);
 
 	
 }

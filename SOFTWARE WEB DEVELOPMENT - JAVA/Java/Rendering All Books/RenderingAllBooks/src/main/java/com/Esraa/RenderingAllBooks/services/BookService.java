@@ -39,7 +39,8 @@ public class BookService {
 	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
 		// TODO Auto-generated method stub
 		Book optionalBook = findBook(id);
-
+//		Optional optionalBook1 = bookRepository.findById(id);
+		
 		optionalBook.setTitle(title);
 		optionalBook.setDescription(desc);
 		optionalBook.setId(id);

@@ -9,12 +9,12 @@ First, create a second controller called BookController. Next, create a new .jsp
 
 ![](1632196014__read%20one.png)
 
--[x] Create a second controller in your books project called BookController that will have the @Controller annotation.
+- [x] Create a second controller in your books project called BookController that will have the @Controller annotation.
 
--[x] Create a new JSP file called show.jsp inside your WEB-INF folder
+- [x] Create a new JSP file called show.jsp inside your WEB-INF folder
 
--[x] Include all the necessary dependencies and settings for using JSP.
+- [x] Include all the necessary dependencies and settings for using JSP.
 
--[x] Add a route in your controller for "/books/3", where the number is a variable for the ID of the book.
+- [x] Add a route in your controller for "/books/3", where the number is a variable for the ID of the book.
 
--[x] Render the JSP with the book information. To test, manually enter the ID of the book in the url. You can use Workbench to see what IDs exist.
+- [x] Render the JSP with the book information. To test, manually enter the ID of the book in the url. You can use Workbench to see what IDs exist.

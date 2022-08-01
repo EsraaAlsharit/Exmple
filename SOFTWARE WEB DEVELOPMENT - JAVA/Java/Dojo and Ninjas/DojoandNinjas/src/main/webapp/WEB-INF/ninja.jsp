@@ -45,9 +45,9 @@
                                 <form:input path="lname" class="form-control" />
                             </div>
                             <div class="form-group my-2">
-                                <form:label path="Age">Age:</form:label>
-                                <form:errors path="Age" class="form-text text-danger" />
-                                <form:input path="Age" class="form-control" />
+                                <form:label path="age">Age:</form:label>
+                                <form:errors path="age" class="form-text text-danger" />
+                                <form:input path="age" class="form-control" />
                             </div>
                             <div class="d-flex justify-content-end">
                                 <input type="submit" value="Create" class="btn btn-primary">

@@ -35,7 +35,6 @@ public class Ninjas {
 
 	@NotNull
 	@Min(value = 1, message = "Age must be at least 1")
-	// @Min(value = 1, message = "Age must at least 1 years old")
 	private int age;
 
 	@Column(updatable = false)

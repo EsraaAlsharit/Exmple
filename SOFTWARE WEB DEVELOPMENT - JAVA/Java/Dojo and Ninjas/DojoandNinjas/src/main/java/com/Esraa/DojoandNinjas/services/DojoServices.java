@@ -28,7 +28,6 @@ public class DojoServices {
 	// retrieves a Dojo
 	public Dojo findDojo(Long id) {
 		Optional<Dojo> optionalDojo = dojoRepository.findById(id);
-
 		if (optionalDojo.isPresent()) {
 			return optionalDojo.get();
 		} else {

@@ -1,6 +1,8 @@
 package com.Esraa.BookBroker.models;
 
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -44,6 +47,18 @@ public class Book {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "User_id")
 	private User user;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "Borrower_id")
+	private User borrowed;
+
+	public User getBorrowed() {
+		return borrowed;
+	}
+
+	public void setBorrowed(User borrowed) {
+		this.borrowed = borrowed;
+	}
 
 	public String getAuthor() {
 		return author;

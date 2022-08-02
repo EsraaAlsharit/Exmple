@@ -41,39 +41,49 @@
                             <th>Action</th>
                         </tr>
                         <c:forEach var="book" items="${Books}">
-                            <tr>
-                                <td>
-                                    <c:out value="${book.id}" />
-                                </td>
-                                <td>
-                                    <a href="/book/${book.id}">
-                                        <c:out value="${book.title}" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <c:out value="${book.author}" />
-                                </td>
-                                <td>
-                                    <c:out value="${book.user.userName}" />
-                                </td>
-                                <td class="d-flex align-items-center justify-content-around">
-                                    <a href="/book/${book.id}/edit">edit</a>
-                                    <form action="/Book/${book.id}" method="post">
-                                        <input type="hidden" name="_method" value="delete">
-                                        <input type="submit" value="delete"
-                                            class="btn text-decoration-underline text-primary">
-                                    </form>
-                                    <form action="/Book/${book.id}/" method="post">
-                                        <input type="hidden" name="_method" value="put">
-                                        <input type="submit" value="borrow"
-                                            class="btn text-decoration-underline text-primary">
-                                    </form>
-                                </td>
-                            </tr>
+                            <c:if test="${book.borrowed == null || book.user.id == User.id}">
+                                <tr>
+                                    <td>
+                                        <c:out value="${book.id}" />
+                                    </td>
+                                    <td>
+                                        <a href="/book/${book.id}">
+                                            <c:out value="${book.title}" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <c:out value="${book.author}" />
+                                    </td>
+                                    <td>
+                                        <c:out value="${book.user.userName}" />
+                                    </td>
+
+                                    <td class="d-flex align-items-center justify-content-around">
+
+                                        <c:if test="${book.user.id == User.id}">
+                                            <a href="/book/${book.id}/edit">edit</a>
+
+                                            <form action="/Book/${book.id}" method="post">
+                                                <input type="hidden" name="_method" value="delete">
+                                                <input type="submit" value="delete"
+                                                    class="btn text-decoration-underline text-primary">
+                                            </form>
+                                        </c:if>
+                                        <c:if test="${book.borrowed == null && book.user.id != User.id}">
+
+                                            <form action="/book/${book.id}/borrow" method="post">
+                                                <input type="submit" value="borrow"
+                                                    class="btn text-decoration-underline text-primary">
+                                            </form>
+                                        </c:if>
+                                    </td>
+                                </tr>
+                            </c:if>
                         </c:forEach>
                     </table>
 
                     <p>Books I'm Borrowing..</p>
+
                     <table class="table table-bordered table-striped text-center">
                         <tr class="table-secondary">
                             <th>ID</th>
@@ -83,29 +93,31 @@
                             <th>Action</th>
                         </tr>
                         <c:forEach var="book" items="${Books}">
-                            <tr>
-                                <td>
-                                    <c:out value="${book.id}" />
-                                </td>
-                                <td>
-                                    <a href="/book/${book.id}">
-                                        <c:out value="${book.title}" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <c:out value="${book.author}" />
-                                </td>
-                                <td>
-                                    <c:out value="${book.user.userName}" />
-                                </td>
-                                <td class="d-flex align-items-center justify-content-around">
-                                    <form action="/Book/${book.id}/" method="post">
-                                        <input type="hidden" name="_method" value="put">
-                                        <input type="submit" value="return"
-                                            class="btn text-decoration-underline text-primary">
-                                    </form>
-                                </td>
-                            </tr>
+                            <c:if test="${book.borrowed != null && book.borrowed.id == User.id}">
+                                <tr>
+                                    <td>
+
+                                        <c:out value="${book.id}" />
+                                    </td>
+                                    <td>
+                                        <a href="/book/${book.id}">
+                                            <c:out value="${book.title}" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <c:out value="${book.author}" />
+                                    </td>
+                                    <td>
+                                        <c:out value="${book.user.userName}" />
+                                    </td>
+                                    <td class="d-flex align-items-center justify-content-around">
+                                        <form action="/book/${book.id}/unborrow" method="post">
+                                            <input type="submit" value="return"
+                                                class="btn text-decoration-underline text-primary">
+                                        </form>
+                                    </td>
+                                </tr>
+                            </c:if>
                         </c:forEach>
                     </table>
 

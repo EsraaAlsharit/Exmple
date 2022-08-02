@@ -59,6 +59,8 @@ public class HomeController {
             User user = userServ.findUser((Long) session.getAttribute("user_id"));
             model.addAttribute("User", user);
             List<Book> book = bookServ.allBooks();
+            // List<Book> books = bookServ.allBookNotBarowed();
+
             model.addAttribute("Books", book);
             return "lib.jsp";
         } else {
@@ -122,10 +124,32 @@ public class HomeController {
         } else {
             return "redirect:/";
         }
-
     }
 
-    @PostMapping("/book/{id}") // update
+    @PostMapping("/book/{id}/borrow") // update
+    public String Borrow(@PathVariable("id") Long id, HttpSession session) {
+        if (session.getAttribute("user_id") != null) {
+            Book book = bookServ.findBook(id);
+            User user = userServ.findUser((Long) session.getAttribute("user_id"));
+            bookServ.BorrowBook(book, id, user);
+            return "redirect:/bookmarket";
+        } else {
+            return "redirect:/";
+        }
+    }
+
+    @PostMapping("book/{id}/unborrow") // update
+    public String UnBorrow(@PathVariable("id") Long id, HttpSession session) {
+        if (session.getAttribute("user_id") != null) {
+            Book book = bookServ.findBook(id);
+            bookServ.UnBorrowBook(book, id);
+            return "redirect:/bookmarket";
+        } else {
+            return "redirect:/";
+        }
+    }
+
+    @PostMapping("/book/{id}/") // update
     public String update(@Valid @ModelAttribute("Book") Book book, BindingResult result, @PathVariable("id") Long id,
             Model model, HttpSession session) {
         if (session.getAttribute("user_id") != null) {
@@ -133,7 +157,7 @@ public class HomeController {
                 return "edit.jsp";
             } else {
                 bookServ.updateBook(book, id);
-                return "redirect:/api/Expenses";
+                return "redirect:/bookmarket";
             }
         } else {
             return "redirect:/";

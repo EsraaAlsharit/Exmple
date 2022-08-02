@@ -41,7 +41,9 @@ public class User {
 
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 	private List<Book> books;
-	
+
+	// @OneToMany(mappedBy = "borrowed", fetch = FetchType.LAZY)
+	// private List<Book> borowedbooks;
 
 	public User() {
 	}

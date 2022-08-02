@@ -48,6 +48,18 @@ public class BookService {
 
 	}
 
+	public void BorrowBook(Book book, Long id, User user) {
+		Book optionalBook = findBook(id);
+		optionalBook.setBorrowed(user);
+		bookRepository.save(optionalBook);
+	}
+
+	public void UnBorrowBook(Book book, Long id) {
+		Book optionalBook = findBook(id);
+		optionalBook.setBorrowed(null);
+		bookRepository.save(optionalBook);
+	}
+
 	public void deleteBook(Long id) {
 		bookRepository.deleteById(id);
 

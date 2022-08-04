@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.*;
 import com.Esraa.ProductsCategories.models.Category;
+import com.Esraa.ProductsCategories.models.Product;
 import com.Esraa.ProductsCategories.services.CategoryServices;
 import com.Esraa.ProductsCategories.services.ProductServices;
 
@@ -52,11 +53,11 @@ public class CategoryControllers {
     }
 
     @PostMapping("/AddProduct/{id}") // add
-    public String AddProduct(@RequestParam(value = "Product") Long Pid,
+    public String AddProduct(@RequestParam(value = "Category") Long Pid,
             @PathVariable("id") Long Cid) {
         Category category = CategoryService.findCategory(Cid);
-        // Category category= CategoryService.findCategory(Cid);
-        CategoryService.addListProduct(category, Pid);
+        Product product = productService.findProduct(Pid);
+        CategoryService.addListProduct(category, product);
         return "redirect:/Category/new";
 
     }

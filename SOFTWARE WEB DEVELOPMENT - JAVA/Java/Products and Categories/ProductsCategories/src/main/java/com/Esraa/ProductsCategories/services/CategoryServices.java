@@ -12,8 +12,7 @@ import com.Esraa.ProductsCategories.repositories.CategoryRepository;
 public class CategoryServices {
 	@Autowired
 	private CategoryRepository CategoryRepository;
-	// @Autowired
-	private ProductServices ProductService;
+	
 
 	// returns all the Categorys
 	public List<Category> allCategory() {
@@ -33,8 +32,7 @@ public class CategoryServices {
 	// return CategoryRepository.findAllByProducts(product);
 	// }
 
-	public Category addListProduct(Category C, Long Pid) {
-		Product product = ProductService.findProduct(Pid);
+	public Category addListProduct(Category C, Product product) {
 		C.setProducts(product);
 		return CategoryRepository.save(C);
 	}

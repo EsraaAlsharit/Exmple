@@ -206,7 +206,7 @@ public class HomeController {
             Project project = projectServ.findProject(id);
             model.addAttribute("Project", project);
             model.addAttribute("id", id);
-            List<Task> listTask = taskService.allTasks();
+            List<Task> listTask = taskService.findProjectby(project);
             model.addAttribute("Tasks", listTask);
 
             return "tasks.jsp";

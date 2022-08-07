@@ -22,6 +22,6 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 
     // List<Project> findByMembers(User user);
 
-    // long countByMembers(User user);
+    long countByMembers(User user);
 
 }

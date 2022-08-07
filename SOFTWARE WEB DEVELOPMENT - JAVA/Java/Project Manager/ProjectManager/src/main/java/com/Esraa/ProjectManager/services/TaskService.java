@@ -20,6 +20,9 @@ public class TaskService {
 	public List<Task> allTasks() {
 		return taskRepository.findAll();
 	}
+	public List<Task> findProjectby(Project project) {
+		return taskRepository.findByProject(project);
+	}
 
 	// creates a project
 	public Task createTask(Task b, User user, Project project) {

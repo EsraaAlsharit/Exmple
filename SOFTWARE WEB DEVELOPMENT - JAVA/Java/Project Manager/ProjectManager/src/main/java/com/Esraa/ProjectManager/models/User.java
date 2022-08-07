@@ -2,6 +2,7 @@ package com.Esraa.ProjectManager.models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -46,10 +47,10 @@ public class User {
 	@Size(min = 8, max = 128, message = "Confirm Password must be between 8 and 128 characters")
 	private String confirm;
 
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Project> projects;
 
-	@OneToMany(mappedBy = "creator", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "creator", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Task> tasks;
 
 	@ManyToMany(fetch = FetchType.LAZY)

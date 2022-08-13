@@ -6,7 +6,7 @@ We are going to create a BankAccount class. This class will recreate some of the
 
 - Practice member variable
 - Practice instance methods and getter and setters
-- Implement static variables and methods. Review the static variables lesson.
+- Implement static variables and methods. Review the [static variables lesson](https://login.codingdojo.com/m/59/5438/33696).
 
 - [x] Create a BankAccount class.
 

@@ -104,11 +104,9 @@ The `Physician` class implements the `HIPAACompliantUser` interface in the follo
 
 
 
-| boolean assignPIN(int)  | Pin must be exactly 4 digits, returns false if not.
-Expected to assign the pin to the user (as a member variable) |
-| ------------- | ------------- |
-| boolean accessAuthorized(Integer)  |  Checks the physician's id against the given id;
-returns true if they are a match, otherwise false.|
+| boolean assignPIN(int)  | Pin must be exactly 4 digits, returns false if not. Expected to assign the pin to the user (as a member variable) |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| boolean accessAuthorized(Integer)  |  Checks the physician's id against the given id; returns true if they are a match, otherwise false.|
 
 **Physician.java**
 ```md
@@ -136,15 +134,10 @@ returns true if they are a match, otherwise false.|
 The `AdminUser` class implements the `HIPAACompliantUser` interface in the following ways:
 
 
-| boolean assignPIN(int)  | Pin must be 6 digits or more; returns false if not
-Expected to assign the pin to the user (as a member variable) |
-| ------------- | ------------- |
-| boolean accessAuthorized(Integer) | Compares the ids, and if they are not a match,
-creates an incident report using the authIncident method,
-Returns true if ids match, false if not. |
+| boolean assignPIN(int)  | Pin must be 6 digits or more; returns false if not Expected to assign the pin to the user (as a member variable) |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| boolean accessAuthorized(Integer) | Compares the ids, and if they are not a match, creates an incident report using the authIncident method, Returns true if ids match, false if not. |
 
-
- 
  
 The `AdminUser` class implements the `HIPAACompliantAdmin` interface in the following ways:
 

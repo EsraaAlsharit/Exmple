@@ -93,7 +93,11 @@ You may have noticed that you will no longer see your class files being generate
 #### Useful Links:
 
 [Spring Tool Suite](https://spring.io/tools)
+
 [Eclipse - entirely Open Source](https://eclipse.org/)
+
 [IntelliJ IDEA - developed by Jet Brains](https://www.jetbrains.com/idea/specials/idea/idea.html)
+
 [Net Beans - entirely Open Source, not widely used](https://netbeans.org/)
+
 [BlueJ - IDE for learning Java](https://bluej.org/)

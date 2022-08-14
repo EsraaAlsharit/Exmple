@@ -82,10 +82,10 @@ const reversed1 = story.split("").reverse().join("");
 ### Hint:
 Can this be written using one loop?
 
--[ ] Rewrite isPrime() to calculate primes faster
+- [ ] Rewrite isPrime() to calculate primes faster
 
--[ ] Try calculating the 100,000th and 1,000,000th prime numbers
+- [ ] Try calculating the 100,000th and 1,000,000th prime numbers
 
--[ ] Determine if the iterative or recursive Fibonacci function is faster
+- [ ] Determine if the iterative or recursive Fibonacci function is faster
 
--[ ] Write a more efficient function to reverse a string
+- [ ] Write a more efficient function to reverse a string

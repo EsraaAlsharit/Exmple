@@ -2,7 +2,7 @@
 [Steps link](https://github.com/EsraaAlsharit/SDA_SoftwareDev/tree/main/SOFTWARE%20WEB%20DEVELOPMENT%20-%20JAVA/JavaOOP)
 
 ### STS for MYSQL
-
+[]()
 
 ### Supported query method predicate keywords and modifiers
 [STS Link](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#appendix.query.method.predicate)
@@ -14,7 +14,7 @@
 - `controllers`
 - `repositories`
 
-### file name for jsp file
+### file name for Templating jsp file 
 - `WEB-INF`
 
 ### Dependencies

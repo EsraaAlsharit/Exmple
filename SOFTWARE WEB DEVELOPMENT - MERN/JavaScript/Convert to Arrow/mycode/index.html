@@ -23,12 +23,12 @@
     </div>
     <p>
         We just like random interactivity in the site, including a fun effect if you hover over <span
-            id="hover-this">        <b>this.</b></span>
+            id="hover-this"><b>this.</b></span>
     </p>
     <p onmouseover="mouseOverFunction(this)" id="color">
         Another task: This should be another feature.
                 I want to click anywhere in this paragraph tag and I want to be able to change the background color to
-        whatever is in this input: <input type="text" onchange="setBackgroundColorById('color',this)" />.
+        whatever is in this input: <input type="text" onchange="getValueFromId('color',this)" />.
     </p>
     <script>
         // document.getElementById("button").onclick = function() {
@@ -49,26 +49,24 @@
         // document.getElementById("hover-this").onmouseover = function(){
         //     setBackgroundColorById("body", "red");
         // }
-        document.getElementById("hover-this").onmouseover = () => {
-            setBackgroundColorById("body", "red");
-        }
+        document.getElementById("hover-this").onmouseover = () => setBackgroundColorById("body", "red");
 
         // document.getElementById("hover-this").onmouseout = function(){
         //     setBackgroundColorById("body", "white");
         // }
-        document.getElementById("hover-this").onmouseout = () => {
-            setBackgroundColorById("body", "white");
-        }
+        document.getElementById("hover-this").onmouseout = () => setBackgroundColorById("body", "white");
 
         // function getValueFromId(id){
         //     return document.getElementById(id).value;
         // }
-        const getValueFromId = id => document.getElementById(id).value;
+        const getValueFromId = (id, color) => document.getElementById(id).style = "background-color: " + color.value;
 
         // function setBackgroundColorById(id, color){
         //     document.getElementById(id).style = "background-color: " + color;
         // }
-        const setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color.value;
+        const setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color;
+
+        //const setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color.value;
 
         // function mouseOverFunction(el){
         //     el.style = "background-color: black";

@@ -19,7 +19,7 @@ In this tab, we will cover how to install Maven for Windows. Maven is a software
     - Unzip the downloaded maven zip.
     - Add the bin directory of the created directory apache-maven-3.5.0 to the user `PATH` environment variable
 
-    ![maven-install-success.jpg]()
+    ![](maven-install-success.jpg)
 
     - Confirm with `mvn --version` in a new shell.
 

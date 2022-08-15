@@ -13,9 +13,9 @@
 | name                        | cost       | text                              | stat               | magnitude |
 | --------------------------- | ---------- | --------------------------------- | ------------------ | --------- |
 | Hard Algorithm              | 2          | increase target's resilience by 3 | resilience         | +3        |
-| ----                        | ---------- | ----                              | ---------          | --------- |
+| ----                        | ---------- | ---------------------------       | ---------          | --------- |
 | Unhandled Promise Rejection | 1          | reduce target's resilience by 2   | resilience         | -2        |
-| ----                        | ---------- | ----------------------            | ------------------ | --------- |
+| ------------------------    | ---------- | ----------------------            | ------------------ | --------- |
 | Pair Programming            | 3          | increase target's power by 2      | power              | +2        |
 
 ### Play out the following scenario
@@ -34,14 +34,14 @@
 | --   | ---------------------------------                                                |
 | 3    | "Red Belt Ninja" uses the attack method on "Black Belt Ninja"                    |
 
- -[x] Make an instance of Unit called "Red Belt Ninja"
+-[x] Make an instance of Unit called "Red Belt Ninja"
 
- -[x] Make an instance of Unit called "Black Belt Ninja"
+-[x] Make an instance of Unit called "Black Belt Ninja"
 
- -[x] Make an instance of Effect called "Hard Algorithm"
+-[x] Make an instance of Effect called "Hard Algorithm"
 
- -[x] Make an instance of Effect called "Unhandled Promise Rejection"
+-[x] Make an instance of Effect called "Unhandled Promise Rejection"
 
- -[x] Make an instance of Effect called "Pair Programming"
+-[x] Make an instance of Effect called "Pair Programming"
 
- -[x] Play out the scenario described above
+-[x] Play out the scenario described above

@@ -8,7 +8,8 @@ class Ninja {
     }
 
     sayName() {
-        console.log(this.name);
+        // console.log(this.name);
+        console.log(` Ninja name: ${this.name}`);
     }
 
     showStats() {

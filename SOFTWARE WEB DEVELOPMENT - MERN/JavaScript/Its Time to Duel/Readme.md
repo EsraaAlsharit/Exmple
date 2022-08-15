@@ -5,7 +5,6 @@
 | name           | cost | power | resilience |
 | -------------- | ---- | ----- | ---------- |
 | Red Belt Ninja | 3    | 3     | 4          |
-
 | Black Belt Ninja | 4 | 5 | 4 |
 
 ### Effect Cards

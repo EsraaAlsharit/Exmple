@@ -27,14 +27,14 @@
 | 3    | Make an instance of "Pair Programming" and play it on "Red Belt Ninja"           |
 | 3    | "Red Belt Ninja" uses the attack method on "Black Belt Ninja"                    |
 
--[x] Make an instance of Unit called "Red Belt Ninja"
+- [x] Make an instance of Unit called "Red Belt Ninja"
 
--[x] Make an instance of Unit called "Black Belt Ninja"
+- [x] Make an instance of Unit called "Black Belt Ninja"
 
--[x] Make an instance of Effect called "Hard Algorithm"
+- [x] Make an instance of Effect called "Hard Algorithm"
 
--[x] Make an instance of Effect called "Unhandled Promise Rejection"
+- [x] Make an instance of Effect called "Unhandled Promise Rejection"
 
--[x] Make an instance of Effect called "Pair Programming"
+- [x] Make an instance of Effect called "Pair Programming"
 
--[x] Play out the scenario described above
+- [x] Play out the scenario described above

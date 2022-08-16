@@ -12,14 +12,24 @@
 </head>
 
 <body>
-    <h1>Github API</h1>
-    <h3>look up your Github user or others :)</h3>
-    <input type="text" oninput="getUsername(this)" name="username">
-    <button onclick="search();">GO!</button>
-
-    <div id="card">
-
+    <div id="form">
+        <h1>Github API</h1>
+        <h3>look up your Github user or others :)</h3>
+        <input type="text" oninput="getUsername(this)" name="username">
+        <button onclick="search();">GO!</button>
+    
+        <div id="card">
+    
+        </div>
+    
+        <button type="submit" class="form-control" id="makeWinnerCard" onclick="myFunction()">Submit</button>
     </div>
+    <div id="winner">
+        <div id="Winner">
+
+        </div>
+    </div>
+   
 </body>
 
 </html>

@@ -1,6 +1,20 @@
+# React setup
+
+#### first install npm in cmd
+
+md```
 npm install
+
+````
 or
-npm install
-npx create-react-app my-app
-cd my-app
+md```
+npm install -g nodemon
+````
+
+#### make the project
+
+```md
+npx create-react-app yourAppName
+cd yourAppName
 npm start
+```

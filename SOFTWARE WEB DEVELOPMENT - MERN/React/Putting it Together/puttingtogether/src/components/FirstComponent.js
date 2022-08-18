@@ -4,13 +4,14 @@ class FirstComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            position: false
+            newAge: this.props.age
         }
     }
 
     Birthday = () => {
-        console.log(this.setState.age = this.props.age + 1)
-        // this.setState(this.age += 1);
+        this.setState({
+            newAge: this.state.newAge + 1
+        });
     }
 
     render() {
@@ -20,7 +21,7 @@ class FirstComponent extends Component {
             <>
                 <div className=''>
                     <h1>{fname}, {lname}</h1>
-                    <p>Age: {age}</p>
+                    <p>Age: {this.state.newAge}</p>
                     <p>Hair Color:{HairColor}</p>
                 </div>
                 <button onClick={this.Birthday}>Birthday Button for {lname} {fname}</button>

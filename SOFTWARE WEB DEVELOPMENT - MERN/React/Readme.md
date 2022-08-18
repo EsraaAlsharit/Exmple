@@ -2,12 +2,12 @@
 
 #### first install npm in cmd
 
-md```
+```md
 npm install
 
 ````
 or
-md```
+```md
 npm install -g nodemon
 ````
 

@@ -11,11 +11,11 @@ class FirstComponent extends Component {
 
     render() {
 
-        const { name, HairColor, age } = this.props
+        const { fname, lname, HairColor, age } = this.props
         return (
             <>
                 <div className=''>
-                    <h1>{name}</h1>
+                    <h1>{fname}, {lname}</h1>
                     <p>Age: {age}</p>
                     <p>Hair Color:{HairColor}</p>
                 </div>

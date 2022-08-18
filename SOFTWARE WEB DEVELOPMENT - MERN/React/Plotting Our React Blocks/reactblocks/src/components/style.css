@@ -1,0 +1,41 @@
+
+.top-nav {
+  height: 150px;
+  background-color: #6aa84f;
+}
+.side-nav {
+  height: 300px;
+  width: 200px;
+  background-color: #6fa8dc;
+
+  margin: 10px;
+}
+.main {
+  height: 400px;
+  width: 700px;
+  background-color: #e06666;
+
+  margin: 10px;
+  padding: 10px;
+}
+.sub-content {
+  height: 200px;
+  width: 210px;
+  background-color: #ffd966;
+
+  margin: 8px;
+}
+.advertisement {
+  height: 120px;
+  width: 660px;
+  background-color: #b4a7d6;
+
+  margin: 10px;
+}
+.row {
+  /* TODO - what should go here? */
+  display: flex;
+  
+  
+}
+

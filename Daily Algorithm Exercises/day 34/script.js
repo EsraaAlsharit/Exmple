@@ -23,50 +23,47 @@ class SinglyLinkedList {
         return this;
     }
 
-    RemoveHead() {
-        if (this.head === null) {
-
-        }
-        let runner = this.head;
-        if (runner.next != null) {
-            runner = runner.next;
-        }
-        this.head = runner;
-    }
-
-    insertAtFront(data) {
-        if (this.head !== null) {
-            var temp = this.head;
-            this.head = new Node(data)
-            this.head.next = temp
-        } else {
-            this.head = new Node(data)
-        }
-    }
-
-    average() {
-        if (this.head == null) {
-            return this;
-        } else {
+    print() {
+        if (this.head != null) {
             let runner = this.head;
-            var sum = 0
+
             while (runner.next !== null) {
-                sum += runner.data;
+                console.log(runner.data)
+                runner = runner.next;
             }
+            console.log(runner.data)
         }
+    }
+
+    prePend(newVal, targetVal) {
+        let runner = this.head;
+        while (runner.next != null) {
+            if (runner.next.data == targetVal) {
+                var temp = runner.next
+                runner.next = new Node(newVal)
+                runner.next.next = temp
+                return true
+            }
+            runner = runner.next
+        }
+        return false
     }
 
     removeVal(num) {
-        let runner = this.head;
-        if (runner.data == num) {
-            this.head = runner.next
-        }
-        while (runner.next !== null) {
-            if (runner.next.data == num) {
-                runner.next = runner.next.next.data
-                break
+        if (this.head != null) {
+            let runner = this.head;
+            if (runner.data == num) {
+                this.head = runner.next
             }
-            runner = runner.next;
+            else {
+                while (runner.next !== null) {
+                    if (runner.next.data == num) {
+                        runner.next = runner.next.next
+                        break
+                    }
+                    runner = runner.next;
+                }
+            }
         }
 
 
@@ -83,10 +80,14 @@ class SinglyLinkedList {
 
 var newList = new SinglyLinkedList();
 newList.insertAtBack(5).insertAtBack(8).insertAtBack(7).insertAtBack(6).insertAtBack(3);
-console.log(newList.head)
+// newList.insertAtBack(5);
+newList.print()
+console.log()
 console.log(newList.SenLast())
-newList.removeVal(8)
-console.log(newList.head)
+newList.removeVal(7)
+console.log()
+newList.print()
+// console.log(newList.head)
 
 
 

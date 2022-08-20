@@ -18,6 +18,6 @@ Hint: Use state and conditional rendering.
 
 - [x] Create validations for Email
 
-- [x] Create validations for password and confirm password
+- [ ] Create validations for password and confirm password
 
-- [x] Sensei Bonus: Only show the validations if the input is not blank (You should not see the error messages if you have not typed anything in)
+- [ ] Sensei Bonus: Only show the validations if the input is not blank (You should not see the error messages if you have not typed anything in)

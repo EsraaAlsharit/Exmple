@@ -11,7 +11,7 @@ You will also need to create the context object.
 
 Your App.js function should look something like this (note that Navbar and FormWrapper don't take in any props):
 
-md```
+```md
 function App() {
 return (
 <Wrapper>
@@ -25,6 +25,7 @@ return (
 
 ![](NavBar_Context_Assignment.png)
 
+
 - [ ] Create the Form Component
 
 - [ ] Create the FormWrapper Component
@@ -34,4 +35,4 @@ return (
 - [ ] Create the Wrapper Component
 
 - [ ] Create the context object
-```
+

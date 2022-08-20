@@ -67,11 +67,11 @@ const UserForm = (props) => {
     const handlepassword = () => {
         console.log(passwordCon)
         console.log(password)
-        if (password === passwordCon) {
-            setMatchError(" ");
+        if (password !== passwordCon) {
+            setMatchError("Password must match");
         }
         else {
-            setMatchError("Password must match");
+            setMatchError(" ");
         }
     };
 
@@ -90,7 +90,7 @@ const UserForm = (props) => {
                         {
                             Firstname ?
                                 <p style={{ color: 'red' }}>{Firstname}</p> :
-                                'First name must be at least 2 characters'
+                                <p></p>
                         }
                     </div>
                     <div className="form-group my-2">
@@ -99,7 +99,7 @@ const UserForm = (props) => {
                         {
                             lastname ?
                                 <p style={{ color: 'red' }}>{lastname}</p> :
-                                'Last name must be at least 2 characters'
+                                <p></p>
                         }
                     </div>
                     <div className="form-group my-2">
@@ -108,28 +108,28 @@ const UserForm = (props) => {
                         {
                             email ?
                                 <p style={{ color: 'red' }}>{email}</p> :
-                                'Email must be at least 5 characters'
+                                <p></p>
                         }
                     </div>
 
                     <div className="form-group my-2">
                         <label>Password: </label>
-                        <input className='form-control' type="text" onChange={passwordhandel} />
+                        <input className='form-control' type="password" onChange={passwordhandel} />
                         <p>{
                             passwordError ?
                                 <p style={{ color: 'red' }}>{passwordError}</p> :
-                                <p>Password must be at least 8 characters</p>
+                                <p></p>
                         }
                         </p>
                     </div>
 
                     <div className="form-group my-2">
                         <label>Confirm Password: </label>
-                        <input className='form-control' type="text" onChange={passwordConhandle} />
+                        <input className='form-control' type="password" onChange={passwordConhandle} />
                         <p>{
                             passwordConError ?
                                 <p style={{ color: 'red' }}>{passwordConError}</p> :
-                                <p>Password must be at least 8 characters</p>
+                                <p></p>
                         }
                         </p>
                         <p>{

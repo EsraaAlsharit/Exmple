@@ -36,4 +36,3 @@ What this means is that we will only render the error if it's not null. Here's s
 ![](use-reducer-assignment.png)
 
 
-

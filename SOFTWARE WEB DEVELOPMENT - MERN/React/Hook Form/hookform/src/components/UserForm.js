@@ -66,9 +66,7 @@ const UserForm = (props) => {
                     </tr>
                 </table>
 
-                <p></p>
-                <p></p>
-                <p></p>
+                
             </div>
         </div>
     );

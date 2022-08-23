@@ -46,7 +46,6 @@ const UserForm = (props) => {
             setPasswordError(" ");
 
             setPassword(e.target.value);
-            //console.log(password)
             handlepassword()
         }
 

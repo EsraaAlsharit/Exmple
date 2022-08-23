@@ -4,10 +4,10 @@ Create a component with a form inside which accepts a color. When the form is su
 
 ![](box-generator-assignment.png)
 
-- [ ] Allow the user to create/add boxes of various colors.
+- [x] Allow the user to create/add boxes of various colors.
 
-- [ ] On successfully adding a new box, have it appear in the set immediately.
+- [x] On successfully adding a new box, have it appear in the set immediately.
 
-- [ ] Ninja Bonus: clear out the color input on successful submission.
+- [x] Ninja Bonus: clear out the color input on successful submission.
 
-- [ ] Ninja Bonus: Add a second input that takes in an integer. This integer will allow the user to specify the height and width of the generated box.
+- [x] Ninja Bonus: Add a second input that takes in an integer. This integer will allow the user to specify the height and width of the generated box.

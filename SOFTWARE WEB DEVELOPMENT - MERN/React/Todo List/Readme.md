@@ -7,13 +7,13 @@ Hint: When updating the state, make sure to send in a brand new object or array;
 ![](todos-list.png)
 
 
-- [ ] Iterate through the existing tasks using the map method.
+- [x] Iterate through the existing tasks using the map method.
 
-- [ ] Allow the user to add a new task, initially set to not completed.
+- [x] Allow the user to add a new task, initially set to not completed.
 
-- [ ] Allow the user to remove a task by clicking the delete button.
+- [x] Allow the user to remove a task by clicking the delete button.
 
-- [ ] Allow the user to toggle a task's completion property by clicking the checkbox next to it.
+- [x] Allow the user to toggle a task's completion property by clicking the checkbox next to it.
 
 - [ ] Ninja Bonus: When updating the tasks' state, don't mutate the current task objects or the current task list.
 

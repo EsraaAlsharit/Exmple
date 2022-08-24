@@ -3,11 +3,11 @@ Develop a tabs component that will take in an array of items. Each item will hav
 
 ![](tabs-assignment.png)
 
-- [ ] Create a tabs component that accepts an array of varying length.
+- [x] Create a tabs component that accepts an array of varying length.
 
-- [ ] Have the tab headers, when clicked on correctly show the appropriate content below.
+- [x] Have the tab headers, when clicked on correctly show the appropriate content below.
 
-- [ ] Ninja Bonus: Allow each tab to optionally have a callback which gets fired when the relevant tab header is clicked.
+- [x] Ninja Bonus: Allow each tab to optionally have a callback which gets fired when the relevant tab header is clicked.
 
 - [ ] Ninja Bonus: Add some CSS animations to the tab switching to smooth out the user experience.
 

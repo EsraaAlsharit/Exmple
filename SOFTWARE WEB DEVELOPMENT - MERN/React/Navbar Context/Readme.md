@@ -28,11 +28,11 @@ return (
 
 - [ ] Create the Form Component
 
-- [ ] Create the FormWrapper Component
+- [x] Create the FormWrapper Component
 
-- [ ] Create your Navbar Component
+- [x] Create your Navbar Component
 
-- [ ] Create the Wrapper Component
+- [x] Create the Wrapper Component
 
 - [ ] Create the context object
 

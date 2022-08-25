@@ -29,7 +29,7 @@ const Pokemon = props => {
         <div className='d-flex justify-content-center container my-5'>
             <div>
             <div className=''>
-            <button className='btn btn-secondary' onClick={useEffect}>Fetch Pokemon</button>
+            <button className='btn btn-secondary' onClick={FetchPoke}>Fetch Pokemon</button>
             </div>
             <ul className='text-center my-3'>
             {Poke.length > 0 && Poke.map((poke, index)=>{

@@ -10,7 +10,7 @@ Create a simple React app that can handle the following routes:
 
 4. localhost:3000/hello/blue/red: This should display the word "hello" in blue text with a red background. It should work with any other valid word and colors.
 
-Hint: use the isNaN method (is Not a Number). For example: isNaN(+"35") is false, isNaN(+"hello") is true
+Hint: use the `isNaN` method (is Not a Number). For example: `isNaN(+"35")` is `false`, `isNaN(+"hello")` is `true`
 
 ![](Untitled_Diagram_(3).png)
 

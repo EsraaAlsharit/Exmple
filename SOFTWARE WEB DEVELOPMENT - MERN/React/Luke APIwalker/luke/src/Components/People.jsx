@@ -1,27 +1,29 @@
 import React, {useState, useEffect} from 'react'
+import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 
 function People(props) {
-    
-    const [person, setPerson] = useState('');
+    const {id} = useParams();
+    const [people, setPeople] = useState({});
 
-    console.log(props.id)
-    useEffect(() => {
-        axios.get(`https://swapi.dev/api/people/${props.id}`)
-             .then( response => setPerson(response.data) )
-             .catch( err => console.log(err));
-    }, [props.id]);
-            
+    useEffect(()=>{
+        axios.get(`https://swapi.dev/api/people/${id}`)
+            .then(response=>{console.log(response)
+                setPeople(response.data)
+            })
+            .catch(err => console.log(err))
+    }, [id]); 
     return (
-        <div>
-            <h2>{person.name}</h2>
-            <p><b>Height:</b> {person.height}</p>
-            <p><b>Mass:</b> {person.mass}</p>
-            <p><b>Hair Color:</b> {person.hair_color}</p>
-            <p><b>Skin Color:</b> {person.skin_color }</p>
+        <div className=''>
+            <h2 className='my-3'>{people.name}</h2>
+            <p><b>Height:</b> {people.height}</p>
+            <p><b>Mass:</b> {people.mass}</p>
+            <p><b>Hair Color:</b> {people.hair_color}</p>
+            <p><b>Skin Color:</b> {people.skin_color }</p>
         </div>
-    )
+    );
+    
 }
 
 export default People

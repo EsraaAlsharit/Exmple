@@ -14,6 +14,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/home">
+            {/* <Link to="/">Home</Link>
+            |
+            <Link to="/about">About</Link> */}
             <Home />
           </Route>
           <Route exact path="/:word">

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "faker-api",
+  "description": "To solidify the concepts of making our own api, we are going to create an api that generates a random user on a GET request. We will be using Postman to make our GET requests.",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
-const JokeSchema = new mongoose.Schema({
+const JokesSchema = new mongoose.Schema({
 	setup: String,
-	punchline: String
+	punchline: String,
 });
 
-const Joke = mongoose.model("Jokes_API", JokeSchema);
+const Jokes = mongoose.model("Jokes", JokesSchema);
 
-module.exports = Joke;
+module.exports = Jokes;
+

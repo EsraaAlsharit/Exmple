@@ -1,17 +1,16 @@
 {
-  "name": "jokes_api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "mongoose": "^6.5.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "alreem",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "//need install\r npm init -y\r npm install mongoose express\r //run\r nodemon Server.js"
 }

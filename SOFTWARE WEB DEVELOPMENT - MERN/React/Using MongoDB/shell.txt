@@ -1,0 +1,66 @@
+use my_first_db
+//db.dropDatabase()
+
+show dbs 
+db.createCollection('students')
+show collections
+
+//db.name_coll.drop()
+
+db.students.insert({name:'Esraa',home:'jappan',lucky_number:7,birthday:{month:11,day:27,year:1997}})
+
+db.students.insert({name:'Sara',home:'jappan',lucky_number:11,birthday:{month:11,day:11,year:1999}})
+
+db.students.insert({name:'Reem',home:'Saudi Arabic',lucky_number:5,birthday:{month:8,day:25,year:1998}})
+
+db.students.insert({name:'Mohmad',home:'US',lucky_number:2,birthday:{month:2,day:2,year:2002}})
+
+db.students.insert({name:'Eman',home:'Ksa',lucky_number:9,birthday:{month:4,day:24,year:1998}})
+
+db.students.find()
+
+db.students.find().pretty()
+
+db.students.find({home:'jappan'})
+
+db.students.find({lucky_number:{$gt:3}})
+
+db.students.find({lucky_number:{$lte:10}})
+
+db.students.find({lucky_number:{$gt:1 ,$lt:9}})
+
+db.students.updateMany({}, {$set: {interests:["coding","brunch","MongoDB"]}})
+
+ db.students.updateOne({ _id: ObjectId("630b58a3739659317529ef1b"}, {$push:{interests: "anime"}})
+
+ db.students.updateOne({ _id: ObjectId("630b5496739659317529ef19")}, {$push:{interests: "anime"}})
+
+db.students.updateOne({ _id: ObjectId("630b58a3739659317529ef1b")}, {$push:{interests: "taxes"}})
+
+db.students.updateOne({name: "Reem"}, {$addToSet:{interests: "taxes"}})
+
+db.students.updateOne({name: "Reem"}, {$pop:{interests: 1}})
+
+db.students.deleteMany({home: "jappan"})
+
+db.students.deleteOne({name: "Mohmad"})
+
+db.students.deleteOne({lucky_number:{$gt:5}})
+//delete 
+
+db.students.updateMany({}, {$set: {number_of_belts:0}})
+
+db.students.updateMany({home:'jappan'},{$set:{number_of_belts:1}})
+
+db.students.updateMany( {}, { $rename:{ "number_of_belts": "belts_earned" } } )
+//Rename to all
+//db.students.updateMany( {_id:ObjectId("630b58a3739659317529ef1b")}, { $rename:{ "number_of_belts": "belts_earned" } } )
+
+db.students.updateMany({}, {$unset:{lucky_number:0}})
+
+
+db.students.updateMany({}, {$set: {updated_on: new Date()}})
+
+
+
+//db.inventory.find( { $or: [ { home: 'jappan' }, { home: 'Saudi Arabic' } ] } )

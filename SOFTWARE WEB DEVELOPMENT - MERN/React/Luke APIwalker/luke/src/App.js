@@ -11,8 +11,8 @@ function App() {
   return (
 
     <div className="App">
-      <From />
       <BrowserRouter>
+        <From />
         <Switch>
           <Route path="/people/:id">
             <People />

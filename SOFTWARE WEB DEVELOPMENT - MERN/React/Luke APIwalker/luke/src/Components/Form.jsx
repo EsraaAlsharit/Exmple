@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useHistory } from "react-router-dom";
 
-function From() {
+const From=(props)=> {
 
     const [resource, setResource] = useState("people");
     const [selectedId, setSelectedId] = useState("");
@@ -14,20 +14,25 @@ function From() {
 
     return (
         <div className='container m-5'>
-            <form className="form-inline" onSubmit={handleSubmit}>
-                <div className='form-group mb-2'>
+            <form className="form-inline row align-items-center" onSubmit={handleSubmit}>
+                <div className='form-group col-2'>
                 <label>Search for: </label>
-                <select className='form-control' onChange={ e=>setResource(e.target.value)} value={resource} >
+                </div>
+                <div className='form-group mb-2 col-4'>
+                <select className='form-control' onChange={ (e)=>setResource(e.target.value)} value={resource} >
                     <option value='people'>People</option>
                     <option value='planet'>Planet</option>
                 </select>
                 </div>
-                <div className="form-group mx-sm-3 mb-2">
+                <div className="form-group col-1">
                 <label>ID: </label>
-                <input type='number' className='form-control' onChange={ e=>setSelectedId(e.target.value) } value={selectedId} />
-
                 </div>
+                <div className="form-group col-2">
+                <input type='number' className='form-control' onChange={ (e)=>setSelectedId(e.target.value) } value={selectedId} />
+                </div>
+                <div className='form-group col-2'>
                 <input className='btn btn-primary' type="submit" value="Search" />
+                </div>
             </form>
         </div>
     )

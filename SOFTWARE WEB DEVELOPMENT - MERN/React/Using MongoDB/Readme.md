@@ -10,7 +10,7 @@
 
 - [x] Get all students.
 
-- [x] Retrieve all students who are from California (San Jose Dojo) or Washington (Seattle Dojo).
+- [ ] Retrieve all students who are from California (San Jose Dojo) or Washington (Seattle Dojo).
 
 - [x] Get all students whose lucky number is greater than 3
 

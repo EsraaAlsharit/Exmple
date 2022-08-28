@@ -5,34 +5,34 @@ To solidify the concepts of making our own api, we are going to create an api th
 
 In this assignment, we will be using 2 javascript libraries to create a simple API that generates a User and/or Company depending on the route:
 
-Express (Server)
-Faker (Fake data generator)
+- Express (Server)
+- Faker (Fake data generator)
 
 
 Go ahead and follow the checklist below using the 2 classes below:
 
-User class
-_id
-firstName
-lastName
-phoneNumber
-email
-password
-Company class
-_id
-name
-address
-street
-city
-state
-zipCode
-country
+- User class
+  - _id
+  - firstName
+  - lastName
+  - phoneNumber
+  - email
+  - password
+- Company class
+  - _id
+  - name
+  - address
+    - street
+    - city
+    - state
+    - zipCode
+    - country
 
 
 ### Faker
 The faker library has a ton of methods we can use to populate specific fields with randomly generated data. Look through the faker [documentation](https://github.com/faker-js/faker) and search through the methods to choose the ones that you would use to populate each field.
 
-Here is an example of how we can use faker
+**Here is an example of how we can use faker**
 ```md
 class Product {
   constructor() {
@@ -53,25 +53,25 @@ console.log(new Product());
  */
  ````
 
-Create a new project folder "Faker_API" and with your terminal, navigate into your new folder
+- [ ] Create a new project folder "Faker_API" and with your terminal, navigate into your new folder
 
-Create a package.json file using the "npm init -y" command in your terminal
+- [ ] Create a package.json file using the "npm init -y" command in your terminal
 
-install express and faker
+- [ ] install express and faker
 
-Create a server.js file
+- [ ] Create a server.js file
 
-In your server.js file, Import express and faker
+- [ ] In your server.js file, Import express and faker
 
-Create 2 classes: User, Company with the same attributes as listed above
+- [ ] Create 2 classes: User, Company with the same attributes as listed above
 
-Create an api route "/api/users/new" that returns a new user
+- [ ] Create an api route "/api/users/new" that returns a new user
 
-Create an api route "/api/companies/new" that returns a new company
+- [ ] Create an api route "/api/companies/new" that returns a new company
 
-Create an api route "/api/user/company" that returns both a new user and a new company
+- [ ] Create an api route "/api/user/company" that returns both a new user and a new company
 
-Run your server.js file using nodemon
+- [ ] Run your server.js file using nodemon
 
-Using Postman, test your new GET routes
+- [ ] Using Postman, test your new GET routes
 

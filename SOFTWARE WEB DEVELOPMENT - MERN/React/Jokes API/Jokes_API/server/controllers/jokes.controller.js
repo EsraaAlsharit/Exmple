@@ -17,16 +17,13 @@ module.exports.createNewJokes = (req, res) => {
       .catch(err => res.json({ message: "Something went wrong", error: err }));
   };
 
-  // module.exports.updateExistingJokes = (req, res) => {
-  //   Jokes.findOneAndUpdate({ _id: req.params.id }, req.body)
-  //     .then(updatedJokes => res.json({ updatedJokes }))
-  //     .catch(err => res.json({ message: "Something went wrong", error: err }));
-  // };  
-  module.exports.updateExistingUser = (req, res) => {
-    Jokes.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-      .then(updatedUser => res.json({ jokes: updatedUser }))
+  module.exports.updateExistingJokes = (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+      .then(updatedJokes => res.json({ Jokes: updatedJokes }))
       .catch(err => res.json({ message: "Something went wrong", error: err }));
   };
+
+
   module.exports.deleteAnExistingJokes = (req, res) => {
     Jokes.deleteOne({ _id: req.params.id })
       .then(result => res.json({ result: result }))

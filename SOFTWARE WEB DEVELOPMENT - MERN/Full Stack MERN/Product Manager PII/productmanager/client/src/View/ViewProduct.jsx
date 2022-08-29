@@ -4,14 +4,14 @@ import axios from 'axios';
 import {useParams} from 'react-router-dom'
 
 const ViewProduct=()=>{
-    const {_id}=useParams();
+    const {id}=useParams();
     const [product,setProduct]=useState({});
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/product/'+_id)
+        axios.get('http://localhost:8000/api/product/'+id)
         .then(res=>setProduct(res.data))
         .catch(err=>console.error(err));
-    },[_id])
+    },[id])
 
     return(
         <>

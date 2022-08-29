@@ -12,14 +12,12 @@ import ViewProduct from './View/ViewProduct';
 
 function App() {
   return (
-
-
     <BrowserRouter>
       <Switch>
         <Route path="/product">
           <Main />
         </Route>
-        <Route path="/product/:_id">
+        <Route path="/product/:id">
         <ViewProduct/>
       </Route>
       </Switch>

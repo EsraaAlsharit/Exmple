@@ -19,8 +19,18 @@ npx create-react-app client
 cd client
 npm install axios
 npm install cors
+npm install react-router-dom@5
 
 npm install --save bootstrap
 ````
 
+if you pull it 
+```md
+cd client
+npm install
+npm install axios
+npm install cors
+npm install react-router-dom@5
 
+npm install --save bootstrap
+````

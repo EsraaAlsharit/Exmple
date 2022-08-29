@@ -30,14 +30,14 @@ within "Jokes" create a modularized folder structure (server ==> controllers, ro
 
 - [x] Export a function to create a joke
 
-- [x] Export a function to update a joke
+- [ ] Export a function to update a joke
 
 - [x] Export a function to delete a joke
 
-- [x] in the jokes.routes file: import \* from your controller file and add an express route for every route listed in the wireframe
+- [ ] in the jokes.routes file: import \* from your controller file and add an express route for every route listed in the wireframe
 
-- [x] In your server.js file: setup express, import your joke routes, and run your server
+- [ ] In your server.js file: setup express, import your joke routes, and run your server
 
-- [x] Use Postman to create new jokes and use the browser to view them
+- [ ] Use Postman to create new jokes and use the browser to view them
 
-- [x] Use Postman to perform the POST DELETE and PUT operations and use the browser to GET them
+- [ ] Use Postman to perform the POST DELETE and PUT operations and use the browser to GET them

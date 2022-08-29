@@ -9,10 +9,10 @@ const ProductList = (props) => {
             <h2>All Products:</h2>
             <ul className='list-group list-group-flush '>
         {
-            props.Product.map((Product,i) =>{
+            props.Products.map((product,i) =>{
                 return (
                     <li className=''>
-                    <Link to={"/product/"+Product._id} className="text-dark h5"><p key={i}>{Product.title}</p></Link>
+                    <Link to={"/product/"+product._id} className="text-dark h5"><p key={i}>{product.title}</p></Link>
                     </li>
                 )
             })

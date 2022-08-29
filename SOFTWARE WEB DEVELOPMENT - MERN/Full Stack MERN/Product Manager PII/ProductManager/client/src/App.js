@@ -14,12 +14,12 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/product">
+        <Route exact path="/product">
           <Main />
         </Route>
-        <Route path="/product/:id">
-        <ViewProduct/>
-      </Route>
+        <Route exact path="/product/:id">
+          <ViewProduct />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

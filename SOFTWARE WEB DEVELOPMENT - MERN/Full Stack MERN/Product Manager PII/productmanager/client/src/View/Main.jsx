@@ -16,7 +16,7 @@ const Main = () =>{
         <>
         <ProductForm />
         <hr/>
-        <ProductList Product={Product} />
+        <ProductList Products={Product} />
         </>
     );
 }

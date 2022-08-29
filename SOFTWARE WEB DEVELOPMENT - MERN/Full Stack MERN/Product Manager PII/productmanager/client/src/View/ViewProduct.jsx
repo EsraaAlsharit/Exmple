@@ -5,8 +5,8 @@ import {useParams} from 'react-router-dom'
 
 const ViewProduct=()=>{
     const {id}=useParams();
+    
     const [product,setProduct]=useState({});
-
     useEffect(()=>{
         axios.get('http://localhost:8000/api/product/'+id)
         .then(res=>setProduct(res.data))
@@ -14,11 +14,11 @@ const ViewProduct=()=>{
     },[id])
 
     return(
-        <>
-            <p>Product Title: {product.title}</p>
+        <div className='text-center my-5 py-5'>
+            <h6>{product.title}</h6>
             <p>Product Price: {product.price}</p>
             <p>Product Description: {product.description}</p>
-        </>
+        </div>
     )
 }
 

@@ -4,6 +4,7 @@
 mkdir myNewProject
 cd myNewProject
 npm init -y
+npm install cors
 npm install express
 npm install mongoose
 ````
@@ -45,7 +46,6 @@ mongoose.connect('mongodb://localhost/name_of_your_DB', {
 npx create-react-app client
 cd client
 npm install axios
-npm install cors
 npm install react-router-dom@5
 
 npm install --save bootstrap

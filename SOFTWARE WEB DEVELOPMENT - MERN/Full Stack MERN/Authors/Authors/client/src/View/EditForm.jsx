@@ -34,6 +34,13 @@ const EditForm = () => {
         .catch(err => console.error(err))
     },[id])
 
+    
+    useEffect(()=>{
+        if(name===undefined){
+            history.push("/Error")
+        }
+    })
+
     // const onSubmitHandler = e => {
     //     e.preventDefault();
     //     axios.put('http://localhost:8000/api/authors/update/'+id, {

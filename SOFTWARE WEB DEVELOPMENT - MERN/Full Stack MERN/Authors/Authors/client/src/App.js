@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import AddForm from './View/AddForm';
 import EditForm from './View/EditForm';
+import ErrorPage from './View/ErrorPage';
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/New">
             <AddForm />
+          </Route>
+          <Route exact path="/Error">
+            <ErrorPage />
           </Route>
           <Route path="/Edit/:id">
             <EditForm />

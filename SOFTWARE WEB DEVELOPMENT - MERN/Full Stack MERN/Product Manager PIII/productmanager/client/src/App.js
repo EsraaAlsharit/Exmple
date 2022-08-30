@@ -9,9 +9,11 @@ import {
 } from "react-router-dom";
 import Main from './View/Main';
 import ViewProduct from './View/ViewProduct';
+import Update from './View/Update';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Switch>
         <Route exact path="/product">
@@ -20,8 +22,12 @@ function App() {
         <Route exact path="/product/:id">
           <ViewProduct />
         </Route>
+        <Route path="/product/edit/:id">
+          <Update />
+      </Route>
       </Switch>
     </BrowserRouter>
+    </>
   );
 }
 

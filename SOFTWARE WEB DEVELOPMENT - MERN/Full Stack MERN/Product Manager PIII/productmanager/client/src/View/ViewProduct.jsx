@@ -1,11 +1,11 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import axios from 'axios';
-import {useParams} from 'react-router-dom'
+import { useParams,useHistory } from "react-router-dom";
 
 const ViewProduct=()=>{
     const {id}=useParams();
-    
+    const history=useHistory();
     const [product,setProduct]=useState({});
     useEffect(()=>{
         axios.get('http://localhost:8000/api/product/'+id)
@@ -13,11 +13,19 @@ const ViewProduct=()=>{
         .catch(err=>console.error(err));
     },[id])
 
+    const handleDelete = (id) =>{
+        axios.delete("http://localhost:8000/api/product/"+id)
+        .then(res => console.log(res.data))
+        .catch(err => console.error(err))
+        history.push("/product")
+    }
+
     return(
         <div className='text-center my-5 py-5'>
             <h6>{product.title}</h6>
             <p>Product Price: {product.price}</p>
             <p>Product Description: {product.description}</p>
+            <button className='btn btn-danger' onClick={()=>{handleDelete(product._id)}}>Delete</button>
         </div>
     )
 }

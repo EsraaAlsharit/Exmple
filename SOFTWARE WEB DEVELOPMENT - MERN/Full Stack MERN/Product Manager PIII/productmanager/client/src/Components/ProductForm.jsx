@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const ProductForm=()=>{
     const [title,setTitle]=useState('');
-    const [price,setPrice]=useState(0);
+    const [price,setPrice]=useState();
     const [description,setDesc]=useState('');
 
     const onSubmitHandler= (e)=>{

@@ -27,16 +27,19 @@ const EditForm = () => {
 
     useEffect( ()=>   {
         axios.get("http://localhost:8000/api/authors/"+id)
-        .then(res => {setName(res.data.name) })
-        .catch(err => console.error(err))
+        .then(res => {setName(res.data.name)
+            if(res.data.nam ===undefined){
+                history.push("/Error")
+            } })
+        .catch(err => console.error(err))       
     },[id])
 
     
-    useEffect(()=>{
-        if(name===undefined){
-            history.push("/Error")
-        }
-    })
+    // useEffect(()=>{
+        // if(name===undefined){
+        //     history.push("/Error")
+        // }
+    // })
 
     // const onSubmitHandler = e => {
     //     e.preventDefault();

@@ -12,7 +12,7 @@ const New = () => {
         axios.post('http://localhost:8000/api/authors/new', {
             name
         })
-            .then()
+            .then(res => history.push("/Dashboard"))
             .catch(err=>{
                 // console.log(err.response.data.errors.name.message)
                 // console.log(err.response.data.errors)
@@ -32,6 +32,7 @@ const New = () => {
     // }
     return (
         <div className='text-center'>
+            
             <div className='card p-5'>
            
                 <form onSubmit={onSubmitHandler} className='' >

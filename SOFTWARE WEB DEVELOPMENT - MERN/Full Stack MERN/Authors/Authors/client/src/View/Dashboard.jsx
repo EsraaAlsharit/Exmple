@@ -9,6 +9,7 @@ const Dashboard = () =>{
         <a href='/New'>Add an author</a>
         {/* <a href='/new'>Home</a> */}
         <div className='continuer m-5'>
+        <p>We have qoutes by:</p>
         <Table/>
         </div>
         </div>

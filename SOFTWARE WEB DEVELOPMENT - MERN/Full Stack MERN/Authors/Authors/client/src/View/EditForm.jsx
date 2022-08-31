@@ -12,10 +12,7 @@ const EditForm = () => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/authors/update/'+id, {
             name
-        }).then(
-                // history.push("/Dashboard")
-                console.log("done")
-            )
+        }).then(res => history.push("/Dashboard"))
             .catch(err=> {
                 // console.log(err.response.data.errors)
                 const errorObj = err.response.data.errors
@@ -57,7 +54,7 @@ const EditForm = () => {
         <a href='/Dashboard'>Home</a>
         <div className='continuer m-5'>
         
-
+        <p>Edit this author:</p>
         <div className='text-center'>
             <div className='card p-5'>
                 <form onSubmit={onSubmitHandler} className='' >

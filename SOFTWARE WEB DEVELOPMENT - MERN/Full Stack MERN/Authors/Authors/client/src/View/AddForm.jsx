@@ -7,6 +7,7 @@ const AddForm = () =>{
         <h1>Favorite authors</h1>  
         <a href='/Dashboard'>Home</a>
         <div className='continuer m-5'>
+        <p>Add a new author:</p>
             <New/>
         </div>
         </div>

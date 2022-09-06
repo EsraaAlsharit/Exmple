@@ -61,3 +61,15 @@ npm install react-router-dom@5
 
 npm install --save bootstrap
 ````
+
+### RUN
+#### React
+```md
+cd client
+npm start
+````
+#### Server
+```md
+nodemon server.js
+````
+

@@ -1,3 +1,13 @@
+# Install Django
+if you don't have python 
+1. [Python](https://www.python.org/downloads/)
+make pip in env path
+
+2. [Django](https://www.djangoproject.com/download/)
+
+```md
+pip install Django==4.1.1
+````
 # Creating a Django Project
 
 ### Objectives:
@@ -103,6 +113,60 @@ your_project_name_here> python manage.py runservercopy
 For a quick summary/visual overview, here's the structure we should have after all these steps, inside the project folder.
 
 ![](project-structure.png)
+
+# Django Routing
+### Objectives:
+- Understand how routes are divided between project and app level urls.py files
+- Understand how requests are resolved from the urls.py files to the views.py file
+<hr>
+
+We have a new Django project running, but what was all that code we added there at the end? 
+
+**project_name/project_name/urls.py**
+```md
+from django.urls import path, include
+    
+urlpatterns = [
+    path('', include('app_name.urls')),
+]
+````
+The `urlpatterns` is simply a variable that holds a list of urls that this project recognizes. Notice there are 2 arguments being passed to the url function:
+
+a raw string representing a route pattern (in our example: `''`)
+what to do if the pattern matches (in our example: `include('app_name.urls'))`
+The second argument, `include('app_name.urls')` will resolve the rest of the route. So let's go there:
+
+**project_name/app_name/urls.py**
+```md
+from django.urls import path
+from . import views	# the . indicates that the views file can be found in the same directory as this file
+                    
+urlpatterns = [
+    path('', views.index),
+]
+````
+This is the same url function, but this time our arguments indicate that:
+
+1. `''` - the rest of the route both starts and ends with nothing (i.e. "/" is the full route), and
+2. `views.index` - if the requested route matches this pattern, then the function with the name "index" from this app's views.py file will be invoked.
+
+If the route wants a views.index function, then we'd better have one:
+
+**project_name/app_name/views.py**
+```md
+from django.shortcuts import render, HttpResponse
+def index(request):
+    return HttpResponse("response from index method from root route, localhost:8000!")
+````
+A couple of important things to notice here:
+
+1. Every function's first argument will be the request object.
+2. We don't distinguish in our routes anywhere between GET vs POST requests. This will be done within a given function.
+3. If we are returning a string, we cannot simply return a string, but must send the string via HttpResponse (which must be imported. We'll be returning rendered templates again soon enough!)
+
+Here's a visual of how routes get resolved in a Django project:
+![](django_routing.png)
+
 
 - **CharField**
 

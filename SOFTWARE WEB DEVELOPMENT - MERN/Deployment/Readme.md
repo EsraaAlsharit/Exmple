@@ -38,8 +38,8 @@ npm run build
 
 | MacOS and Git BASH | Windows CMD |
 | -------------------| ------------|
-| ```md rm -rf .git```   | ```md rmdir /s .git``` |
-| ```md rm .gitignore```   | ```md del /f .gitignore``` |
+| ``` rm -rf .git```   | ``` rmdir /s .git``` |
+| ``` rm .gitignore```   | ``` del /f .gitignore``` |
 
 Next we will initialize a git repository, add all of our code to it (ignoring node_modules) and create a commit with the message "initial commit".
 

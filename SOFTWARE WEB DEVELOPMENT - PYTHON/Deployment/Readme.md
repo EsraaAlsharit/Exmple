@@ -450,3 +450,18 @@ DATABASES = {
 (venv) ubuntu@54.162.31.253:~myRepoName$ sudo systemctl restart gunicorn
 ````
 13. CHECK: Now visit your site! You should be finished at this point, with a fully functioning site. Since we just created a brand new database, you obviously won't have any data yet, but share your site with your family and friends and you'll have lots of data in no time!
+
+# Reconnecting
+### Objectives:
+- Learn how to reconnect after initial deployment
+<hr>
+Remember how we said that we would have to change our security settings every time our IP changes? The bad news is that this will happen often. The good news is that it's easy to change those settings, if you know where to look.
+
+1. In your AWS console, with your instance selected, scroll down to view some options. Next to security groups, you will see launch-wizard. Click it!
+
+![](14-security-groups.png)
+
+2. Now you just have to update the IP connected to the instance. In the next window you will see something like this at the bottom of your screen. Click the inbound tab, and then select edit.
+![](15-edit-groups.png)
+3. Now, all that is left to do is let AWS automatically change our IP to the new one. Do this by selecting the dropdown in the SSH row, under source, and select MyIP (it is already selected, but doing so again will refresh your IP to the current one). Once this is done, click save. You’re ready to SSH into your instance again!
+![](16-update-security-groups.png)

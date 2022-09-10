@@ -167,6 +167,41 @@ A couple of important things to notice here:
 Here's a visual of how routes get resolved in a Django project:
 ![](django_routing.png)
 
+Routing with Parameters
+Objectives:
+Learn how to capture variables from the url
+In this module, we will look into how Django interprets a request with varying values.
+
+Learn more from the [documentation](https://docs.djangoproject.com/en/2.2/topics/http/urls/#how-django-processes-a-request).
+
+Here are a few examples, to demonstrate the syntax:
+
+**some_project/some_app/urls.py**
+```md
+urlpatterns = [
+        path('bears', views.one_method),                        # would only match localhost:8000/bears
+        path('bears/<int:my_val>', views.another_method),       # would match localhost:8000/bears/23
+        path('bears/<str:name>/poke', views.yet_another),       # would match localhost:8000/bears/pooh/poke
+    	path('<int:id>/<str:color>', views.one_more),           # would match localhost:8000/17/brown
+]
+````
+The corresponding functions would then look like this:
+
+**some_project/some_app/views.py**
+```md
+def one_method(request):                # no values passed via URL
+    pass                                
+    
+def another_method(request, my_val):	# my_val would be a number from the URL
+    pass                                # given the example above, my_val would be 23
+    
+def yet_another(request, name):	        # name would be a string from the URL
+    pass                                # given the example above, name would be 'pooh'
+    
+def one_more(request, id, color): 	# id would be a number, and color a string from the URL
+    pass                                # given the example above, id would be 17 and color would be 'brown'
+````
+
 
 - **CharField**
 

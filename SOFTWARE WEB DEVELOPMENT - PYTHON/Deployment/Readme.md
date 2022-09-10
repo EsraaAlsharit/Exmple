@@ -121,3 +121,65 @@ the_folder_containing_your_pem_file$ ssh -i "your_pem_name.pem" ubuntu@your_inst
 ```md
 ubuntu@54.162.31.253:~$ #Commands you write appear here
 ````
+
+# Server Configuration
+### Objectives:
+- Install the necessary programs on our AWS instance
+
+1. Now we are going to set up our remote server for deployment. Our server is nothing more than a small allocated space on someone else’s larger computer (in this case, the big computer belongs to Amazon!). That space has an installed operating system, just like your computer. In this case, we are using a distribution of Linux called Ubuntu, version 18.04.
+2. Although we have linux, our new computer is otherwise empty. Let’s change that so we can start building a server capable of providing content that the rest of the world can access. Let's check for updates first.
+
+```md
+ubuntu@54.162.31.253:~$ sudo apt-get update
+````
+
+3. Now let's install nginx
+```md
+ubuntu@54.162.31.253:~$ sudo apt-get install nginx
+````
+
+4. Let's make a clone of our git repository on this machine. (NO SUDO!)
+```md
+ubuntu@54.162.31.253:~$ git clone https://github.com/your_username_here/your_repo_name_here
+````
+5. Let's now install venv so we can create a virtual environment.
+```md
+ubuntu@54.162.31.253:~$ sudo apt-get install python3-venv //Say YES when prompted
+````
+6. Navigate to your repository folder
+```md
+ubuntu@54.162.31.253:~$ cd {{ repo name }}
+````
+
+7. Now let's create a virtual environment and activate it.
+```md
+ubuntu@54.162.31.253:~/myRepoName$ python3 -m venv venv //We are using the venv command and naming our virtual env venv
+ubuntu@54.162.31.253:~/myRepoName$ source venv/bin/activate
+````
+
+8. Let's now install the dependencies that we will need in our virtual environment.
+
+9. ```md 
+(venv) ubuntu@54.162.31.253:~/myRepoName$ pip install django==2.2
+(venv) ubuntu@54.162.31.253:~/myRepoName$ pip install bcrypt
+(venv) ubuntu@54.162.31.253:~/myRepoName$ pip install gunicorn
+````
+# VIM
+### Objectives:
+- Learn about VIM, a text editor for Unix
+- Learn a few basic commands for VIM
+<hr>
+If you have used VIM before, skip to the next tab.
+
+VIM is a terminal based file editor. We will use it to change the necessary files in order to get our project running. In the following instructions, you'll be using the `vim` command to enter the editor. The `vim` command can be used either to:
+
+- edit existing files, or
+- create and open a new blank file.
+Because there is no GUI (graphical user interface), it's important to learn a few keyboard commands for navigating around VIM:
+
+- `i` - enter INSERT mode. You should see `–INSERT–` at the bottom left corner of your terminal. Now use your arrow keys to move the cursor to where you want to edit and make your changes.
+- `esc` - exit INSERT mode.
+- `:` - when not in INSERT mode, enters the vim command interface. You should now see a colon at the bottom left corner of your terminal.
+    - `w` and `Enter` - save.
+    - `wq` and `Enter` - save and quit.
+    - `q!` and `Enter` - quit without saving.

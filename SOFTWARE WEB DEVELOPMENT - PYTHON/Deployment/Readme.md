@@ -183,3 +183,51 @@ Because there is no GUI (graphical user interface), it's important to learn a fe
     - `w` and `Enter` - save.
     - `wq` and `Enter` - save and quit.
     - `q!` and `Enter` - quit without saving.
+
+# Modifying Settings
+### Objectives:
+- Update our deployed settings.py file
+<hr>
+
+IMPORTANT
+Anywhere you see {{myRepoName}} – replace that whole thing INCLUDING the {{}} with your outer folder name (same as GitHub repository name).
+Anywhere you see {{projectName}} – replace that whole thing INCLUDING the {{}} with the project folder name (the name of your Django project).
+Anywhere you see {{yourEC2.public.ip}} – replace that whole thing INCLUDING the {{}} with the public IP address of your newly created server.
+<hr>
+
+If you named your repo something different from your project, the repo name and project name may be different, but it is okay if they are the same.
+
+1. Navigate into your main project directory, where `settings.py` lives.
+```md
+(venv) ubuntu@54.162.31.253:~/myRepoName$ cd {{projectName}}
+````
+2. We're going to use a built-in text editor (VIM) in the terminal to update the code in `settings.py`.
+```md
+(venv) ubuntu@54.162.31.253:~/myRepoName/projectName$ sudo vim settings.py
+````
+3. You'll need to add a line that allows you to serve static content. You'll also need to modify a couple of lines, as follows. Don't forget to type `i` to enter insert mode.
+```md
+# inside settings.py
+# modify these lines
+DEBUG = False
+ALLOWED_HOSTS = ['{{yourEC2.public.ip}}']	# keep the quotes!
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")	# add this line at the bottom; don't replace any existing lines!
+````
+
+Save and quit. (`esc`, `:wq`, `enter`)
+
+4. Navigate back to the folder that holds `manage.py`. Make sure your virtual environment is still activated!
+
+```md
+(venv) ubuntu@54.162.31.253:~/myRepoName/projectName$ cd ..
+````
+5. Gather all of the static files in your project into one location:
+```md 
+(venv) ubuntu@54.162.31.253:~myRepoName$ python manage.py collectstatic	# type yes when prompted
+````
+
+6. If you ignored your db and/or migrations files, this is a great time to also make and run migrations, just as you would have done on your local machine!
+```md
+(venv) ubuntu@54.162.31.253:~myRepoName$ python manage.py makemigrations
+(venv) ubuntu@54.162.31.253:~myRepoName$ python manage.py migrate
+````

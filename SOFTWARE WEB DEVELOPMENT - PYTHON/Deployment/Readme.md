@@ -337,3 +337,116 @@ If you see output that looks like this:
 ![](Screen_Shot_2019-07-16_at_4.40.48_PM.png)
 
 Read the error message it gives you. This will often be a typo in one of your configuration files. Another common error is not installing Gunicorn and Django in the same environment. Go over the steps again until you see the green dot output.
+
+# Wrapping Up
+
+### Objectives:
+
+- Test out our deployed server!
+- Highlight common errors
+<hr>
+If you don't see any errors from the last step, drumroll...go to your URL! You are on the internet--amazing!!
+
+### Common errors and where to start debugging:
+
+- 502, bad gateway: there is a problem in your code. Hint: any error starting with 5 indicates a server error
+- Your Gunicorn process won’t start: Check your .service file; typos and wrong file paths are common mistakes
+- Your NGINX restart fails: Check your NGINX file in the sites-available directory. Common problems include typos and forgetting to insert your project name where indicated.
+- Make sure the URL requested is correct (example if your root route is /home, make sure you put /home after the IP)
+
+#### end
+
+<hr>
+# Adding a MySQL Server (optional)
+### Objectives:
+- Learn how to use a MySQL server (vs. SQLite) as the database server
+<hr>
+SQLite is great for testing, but it's not really efficient in the context of real-world use. This may be a bit too much to go into here, but let’s look at a quick summary of why that is, and what we’ll use instead.
+
+Although the developers of SQLite have done much to improve its performance, particularly in version 3, it suffers from some lack of efficient write concurrency. If your site has a lot of traffic, a queue begins to form, waiting for write access to the database. Before long, your response speed will slow to a crawl. This happens only on high-traffic sites, however.
+
+MySQL databases, on the other hand, are incredibly fast, and very good at performing multiple operations concurrently. In addition, MySQL can store an incredibly large amount of data, and thus scales well.
+
+This might never be a consideration for small to medium sized projects, but is key information in the real world. Very soon you may be working for a company that handles a large volume of requests, and it is important to know why depending on a SQLite database alone is not a practical solution for enterprise or large startups.
+
+If you’d like to learn how to add a MySQL database to the app we just deployed, read on. It’s not as hard as you might think, thanks to Django migrations!
+
+1. First, we’ll need to install everything necessary to run MySQL from our deployment machine.
+
+```md
+ubuntu@54.162.31.253:~$ sudo apt-get install libmysqlclient-dev -y
+```
+
+2. Next we'll need to install MySQL-server
+
+```md
+ubuntu@54.162.31.253:~$ sudo apt-get install mysql-server -y
+```
+
+**IMPORTANT: When prompted with the purple screen, don't just hit enter! Enter a password for this server. We recommend using `root` for now. You'll have to type it twice.**
+
+3. CHECK: Make sure it installed correctly.
+
+```md
+ubuntu@54.162.31.253:~$ mysql -u root -p
+```
+
+Enter the password you just set. You should now be in the MySQL server prompt:
+
+```md
+mysql>
+```
+
+4. We're now going to create the database for our project. You can call it whatever you want but we recommend giving it the name of your project.
+
+```md
+mysql> CREATE DATABASE {{projectName}};
+```
+
+**Don't forget semicolons at the end of each line. If you just keep getting the -> after hitting enter, type a ; and press enter.**
+
+5. Exit the MySQL prompt.
+
+```md
+mysql> exit
+```
+
+6. Activate your virtual environment:
+```md
+ubuntu@54.162.31.253:~myRepoName$ source venv/bin/activate
+````
+7. Install a pip module inside our virtual environment to help connect our python code to our MySQL database:
+```md
+(venv) ubuntu@54.162.31.253:~myRepoName$ pip install mysqlclient
+````
+
+8. Now that we have MySQL all set up, we are ready to change some lines in our `settings.py` document so we can start working with our MySQL database! Navigate to the appropriate folder and open it with VIM.
+```md
+ubuntu@54.162.31.253:~myRepoName/projectName$ sudo vim settings.py
+````
+9. Change the databases section in settings.py to look like below. Note: The schema name is the database we just created in step , and the password is the password we set up when we installed the MySQL server in step .
+
+```md
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.mysql',
+'NAME': '{{schemaName}}',
+'USER': 'root',
+'PASSWORD': '{{password}}',
+'HOST': 'localhost',
+'PORT': '3306',
+}
+}
+````
+10. Save and quit
+11. We’re almost done! Now the only thing left to do is to make migrations!
+```md
+(venv) ubuntu@54.162.31.253:~myRepoName$ cd ..
+(venv) ubuntu@54.162.31.253:~myRepoName$ python manage.py makemigrations
+(venv) ubuntu@54.162.31.253:~myRepoName$ python manage.py migrate
+````
+12. Now just need to restart Gunicorn:
+```md
+(venv) ubuntu@54.162.31.253:~myRepoName$ sudo systemctl restart gunicorn
+````
+13. CHECK: Now visit your site! You should be finished at this point, with a fully functioning site. Since we just created a brand new database, you obviously won't have any data yet, but share your site with your family and friends and you'll have lots of data in no time!

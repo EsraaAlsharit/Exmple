@@ -97,4 +97,27 @@ Name your pem key whatever makes the most sense to you as shown in the next step
 
 ![](11-name-instance.png)
 
+# Server Access
+### Objectives
+- Connect to our AWS server instance!
+<hr>
 
+1. Back in your terminal, navigate to the folder that holds the pem key file you just downloaded. Now we’re ready to use our .pem file to connect to the AWS instance!
+    - **Windows users:** you cannot use the command prompt for this. Use git bash or another terminal that allows for ssh.
+2. In your AWS console, click Connect at the top of your screen and use the supplied code in your terminal (PC users: use a bash terminal to do this).
+
+![](12-connect.png)
+
+3. A popup will appear with instructions on how to connect. Copy the two commands, highlighted in the red boxes, and paste them in your terminal.
+
+![](13-connect-pop.png)
+
+```md
+the_folder_containing_your_pem_file$ chmod 400 your_pem_name.pem
+the_folder_containing_your_pem_file$ ssh -i "your_pem_name.pem" ubuntu@your_instance_address_here
+````
+
+4.You will likely be prompted to continue. Type `yes` and wait for a few seconds. If all goes well, you should be on your Ubuntu cloud server. Your terminal should show something like this in the far left of your prompt, signaling you are now logged into your AWS instance! We are no longer affecting our own computer--we are now remotely logged into the server we are renting from Amazon!
+```md
+ubuntu@54.162.31.253:~$ #Commands you write appear here
+````

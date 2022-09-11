@@ -99,3 +99,5 @@ To use the shell, we'll run the following command in our terminal from our proje
 python manage.py shell
 ````
 
+full project 
+[Favorite Books](https://github.com/EsraaAlsharit/SDA_SoftwareDev/tree/main/SOFTWARE%20WEB%20DEVELOPMENT%20-%20PYTHON/Django/Favorite%20Books)

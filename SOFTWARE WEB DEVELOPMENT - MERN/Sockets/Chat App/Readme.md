@@ -16,8 +16,8 @@ Feel free to design your Chat App as you would like it, but for an example see t
 
 ### Resources
 
-- (socket.io docs)[https://socket.io/docs/]
-- (Functional Updates)[https://reactjs.org/docs/hooks-reference.html#functional-updates]
+- [socket.io docs](https://socket.io/docs/)
+- [Functional Updates](https://reactjs.org/docs/hooks-reference.html#functional-updates)
 
 - [x] Build a fully functional chat application
 

@@ -41,3 +41,5 @@ Also:
 If you are using Flask, include a file with the SQL script to create your database (this can be copied when you forward engineer your ERD)
 Remove your github repo after deploying.
 The wireframe is available for download here .
+
+![](pythonWishApp.png)

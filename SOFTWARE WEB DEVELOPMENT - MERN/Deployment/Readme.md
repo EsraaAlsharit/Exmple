@@ -251,4 +251,4 @@ These commands will install pm2 globally, tell pm2 to run `server.js` for us, an
 
 At this point if the status says "online" you are now finished deploying. Good job!
 
-ദ്ദി(⎚_⎚)
+<!-- ദ്ദി(⎚_⎚) -->

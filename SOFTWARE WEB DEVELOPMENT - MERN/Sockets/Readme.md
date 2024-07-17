@@ -42,11 +42,13 @@ With React, we need to install socket.io-client.
 npm install socket.io-client
 To use sockets in React, we need to add an import statement to the top of our component file.
 
-import io from 'socket.io-client';copy
-To initialize the socket, we need to invoke React's useState hook and pass a callback function which will invoke the imported io function like so: io(":nodeServerPortNumberGoesRightHere") . The reason we have to pass in a callback is that if we were to directly invoke the io function, it would be called every time the component rerenders, meaning that we would be creating a bunch of extra sockets. Additionally, we need to add our event listeners inside of a React useEffect callback to ensure that they only get added when the component loads.
+`import io from 'socket.io-client';`
+
+To initialize the socket, we need to invoke React's useState hook and pass a callback function which will invoke the imported io function like so: io(":nodeServerPortNumberGoesRightHere") . The reason we have to 
+pass in a callback is that if we were to directly invoke the io function, it would be called every time the component rerenders, meaning that we would be creating a bunch of extra sockets. Additionally, we need to add our event listeners inside of a React useEffect callback to ensure that they only get added when the component loads.
 
 A super quick and simple setup will look like this:
-
+```md
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import './App.css';
@@ -75,7 +77,8 @@ function App() {
   );
 }
  
-export default App;copy
+export default App;
+```
 Note: If your app is creating two socket connections every time you load the client side, it's probably related to the fact that create-react-app now wraps the App component in a React.StrictMode component to help detect issues in development. Unfortunately, this causes the lazy initial state callback to be fired twice. To prevent this, simply remove the wrapping component in index.js. See the following issue on GitHub: https://github.com/facebook/react/issues/15074
 
 Further Reading:
